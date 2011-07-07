@@ -24,10 +24,10 @@ class UsersController < ApplicationController
       if user
         session[:user_id] = user.id
         
-        if user.target.count == 0
+        if user.targets.count == 0
           redirect_to new_target_path
         else
-          redirect_to new_event_path
+          redirect_to targets_path
         end
       end
     end
