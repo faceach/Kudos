@@ -28,7 +28,6 @@ class TargetActionsController < ApplicationController
      end
 
      if @action.save
-       flash[:notice] = @action
        redirect_to target_actions_url(@target)
      else
        render :action => :new
