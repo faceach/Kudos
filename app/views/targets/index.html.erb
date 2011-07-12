@@ -1,6 +1,6 @@
 <% @targets.each do |target| %>
   <li>
-    <%= link_to target.target_count, target_actions_path(target) %>
+    <%= link_to target.target_count, target_activities_path(target) %>
     <%= button_to 'delete', target_path(target), :method => :delete %>
   </li>
 <% end %>

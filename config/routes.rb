@@ -4,7 +4,7 @@ Demo::Application.routes.draw do
   
   resources :events
   resources :targets do
-    resources :actions, :controller => 'target_actions'
+    resources :activities, :controller => 'target_actions'
   end 
   resources :users
 

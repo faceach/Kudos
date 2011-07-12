@@ -2,33 +2,33 @@ class TargetActionsController < ApplicationController
   before_filter :find_target
   
   def index
-    @actions = @target.actions.all
+    @activities = @target.activities.all
     
   end
   
   def show
-    @action = @target.actions.find(params[:id])
+    @activity = @target.activities.find(params[:id])
   end
   
   def new
-     @action = @target.actions.build
+     @activity = @target.activities.build
 
    end
    
    def create
-     @action = @target.actions.build(params[:action])
-     @action.metadata = Metadata.find_by_name("hour")
-     @action.user_id = session[:user_id]
+     @activity = @target.activities.build(params[:activity])
+     @activity.metadata = Metadata.find_by_name("hour")
+     @activity.user_id = session[:user_id]
      
-     @last = @target.actions.order("id desc").first
+     @last = @target.activities.order("id desc").first
      if(@last != nil && @last.sequence_no != nil)
-       @action.sequence_no = @last.sequence_no + 1
+       @activity.sequence_no = @last.sequence_no + 1
      else
-       @action.sequence_no = 1
+       @activity.sequence_no = 1
      end
 
-     if @action.save
-       redirect_to target_actions_url(@target)
+     if @activity.save
+       redirect_to target_activities_url(@target)
      else
        render :action => :new
      end
@@ -36,10 +36,10 @@ class TargetActionsController < ApplicationController
    end
    
    def destroy
-     @action = @target.actions.find(params[:id])
-     @action.destroy
+     @activity = @target.activities.find(params[:id])
+     @activity.destroy
 
-     redirect_to target_actions_url(@target)
+     redirect_to target_activities_url(@target)
    end
    
    protected
