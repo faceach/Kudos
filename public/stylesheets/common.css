@@ -18,6 +18,10 @@ a
 {
     text-decoration: none;
 }
+a:hover
+{
+    text-decoration: underline;
+}
 /* + Common classes */
     /* - Over write base CSS */
     .gry,
@@ -110,6 +114,10 @@ a
         background: -webkit-linear-gradient(#97dbf3, #1cc5f3); 
         /* Opera 11.10+ */
         background: -o-linear-gradient(#97dbf3, #1cc5f3);
+    }
+    .btn-yes:hover
+    {
+        text-decoration: none;
     }
     .btn-no
     {
