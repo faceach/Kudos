@@ -1,19 +1,19 @@
 <div id="wrapper" class="pw align-c">
     <h1 class="txtindent">啄米</h1>
-	<% form_tag :html => { :class => "clear", :id => "form-login" } do%>
+	<% form_tag(:html => { :class => "clear", :id => "form-login" }) do%>
 	    <fieldset class="formbox">
 	        <legend class="hidden">登录</legend>
 	        <div class="">
 	            <p class="col-l">
 	                <label class="txt-6xl bla" for="">电子邮件</label>
-					<%= text_field_tag :email, params[:name], "input-mail" %>
+					<%= text_field_tag :email, params[:email], :class => "input-mail" %>
 	            </p>
 	            <p class="col-l">
 	                <label class="txt-6xl bla" for="">登录密码</label>
-					<%= text_field_tag :password, params[:password], "input-password"%>
+					<%= text_field_tag :password, params[:password], :class => "input-password"%>
 	            </p>
-	            <input type="submit" id="btn-login" class="" value="登录" />
-				<%= submit_tag "Login"%>
+	            <input type="submit" id="btn-login" value="登录" />
+				<%= submit_tag "登录", :id => "btn-login" %>
 	        </div>
 	    </fieldset>
 	<% end%>
