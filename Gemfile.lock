@@ -77,4 +77,5 @@ PLATFORMS
 DEPENDENCIES
   kaminari
   rails (= 3.0.9)
+  rake (= 0.8.7)
   sqlite3-ruby
