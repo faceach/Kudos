@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+    layout :resolve_layout 
   def new
     @user = User.new()
     
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
   
   def login
+
     session[:user_Id] = nil
     if request.post?
       user = User.authenticate(params[:email], params[:password])
@@ -32,4 +33,14 @@ class UsersController < ApplicationController
       end
     end
   end
+  
+  def resolve_layout
+    case action_name
+    when "login"
+      "blank"
+    else
+      "application"
+    end
+  end
+  
 end

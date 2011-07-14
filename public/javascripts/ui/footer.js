@@ -58,6 +58,6 @@
 // Document Ready.
 jQuery(function($) {
 
-ZM.UI.Footer.init();
+	ZM.UI.Footer.init();
 
 });
