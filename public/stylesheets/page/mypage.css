@@ -18,7 +18,7 @@
     min-height: 102px;
     _height: 102px;
     padding: 15px 0 25px 25px;
-    background: url(../../images/high/bg_fn.png) left bottom repeat-x;
+    background: url(/images/high/bg_fn.png) left bottom repeat-x;
     overflow: hidden;
     position: relative;
 }
@@ -137,7 +137,7 @@
 .pb-name
 {
     padding-right: 16px; 
-    background: url(../../images/high/icon_male.png) right center no-repeat;
+    background: url(/images/high/icon_male.png) right center no-repeat;
 }
 #addupbox
 {
@@ -240,7 +240,7 @@
     min-height: 29px;
     _height: 29px;
     line-height: 29px;
-    background: url(../../images/high/icon_chat.png) left center no-repeat;
+    background: url(/images/high/icon_chat.png) left center no-repeat;
 }
 #plantype
 {
@@ -270,22 +270,22 @@
 #plantype li.pf-all a
 {
     padding-left: 23px;
-    background: url(../../images/high/icon_all.png) 10px center no-repeat;
+    background: url(/images/high/icon_all.png) 10px center no-repeat;
 }
 #plantype li.pf-one a
 {
     padding-left: 31px;
-    background: url(../../images/high/icon_one.png) 10px center no-repeat;
+    background: url(/images/high/icon_one.png) 10px center no-repeat;
 }
 #plantype li.pf-ten a
 {
     padding-left: 31px;
-    background: url(../../images/high/icon_ten.png) 10px center no-repeat;
+    background: url(/images/high/icon_ten.png) 10px center no-repeat;
 }
 #plantype li.pf-hdrd a
 {
     padding-left: 31px;
-    background: url(../../images/high/icon_hdrd.png) 10px center no-repeat;
+    background: url(/images/high/icon_hdrd.png) 10px center no-repeat;
 }
 
 .fb-list li
@@ -305,7 +305,7 @@
     height: 1.6em;
     border: 1px solid #cbcbcb;
     padding-left: 20px;
-    background: url(../../images/high/icon_search.png) 3px center no-repeat;
+    background: url(/images/high/icon_search.png) 3px center no-repeat;
     
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -317,7 +317,7 @@
     right: 2px;
     width: 16px;
     height: 17px;
-    background: url(../../images/high/icon_clear.png) left center no-repeat;
+    background: url(/images/high/icon_clear.png) left center no-repeat;
 }
 
 
