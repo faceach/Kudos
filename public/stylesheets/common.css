@@ -18,6 +18,10 @@ a
 {
     text-decoration: none;
 }
+a:hover
+{
+    text-decoration: underline;
+}
 /* + Common classes */
     /* - Over write base CSS */
     .gry,
@@ -74,7 +78,7 @@ a
         height: 7px;
         left: -6px;
         top: 6px;
-        background: url(../_imgs/high/icon_formerr.png) left top no-repeat;
+        background: url(/images/high/icon_formerr.png) left top no-repeat;
     }
     
     /* - Common */
@@ -111,6 +115,10 @@ a
         /* Opera 11.10+ */
         background: -o-linear-gradient(#97dbf3, #1cc5f3);
     }
+    .btn-yes:hover
+    {
+        text-decoration: none;
+    }
     .btn-no
     {
     }
@@ -129,7 +137,7 @@ a
         display: inline-block;
         *display: inline;
         vertical-align: text-top;
-        background: url(../_imgs/high/icon_go.png) left bottom no-repeat;
+        background: url(/images/high/icon_go.png) left bottom no-repeat;
     }
     .bookmark
     {
@@ -141,11 +149,11 @@ a
     }
     .bkmk-sina
     {
-        background: url(../_imgs/high/bkmk_sina_dis.png) left top no-repeat;
+        background: url(/images/high/bkmk_sina_dis.png) left top no-repeat;
     }
     .bkmk-sina:hover
     {
-        background: url(../_imgs/high/bkmk_sina.png) left top no-repeat;
+        background: url(/images/high/bkmk_sina.png) left top no-repeat;
     }
 
     /* - For zhuomi website */
@@ -212,7 +220,7 @@ a
             width: 14px;
             height: 21px;
             display: block;
-            background: url(../_imgs/high/icon_dropdown.png) left center no-repeat;
+            background: url(/images/high/icon_dropdown.png) left center no-repeat;
         }
 
 /* + Common CSS - End */

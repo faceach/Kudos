@@ -3,5 +3,5 @@ class Metadata < ActiveRecord::Base
   self.table_name = "metadata"
   
   has_many :targets
-  has_many :actions
+  has_many :targetactions
 end

@@ -1,0 +1,11 @@
+
+<% @activities.each do |activity| %>
+  <li>
+    <%= link_to activity.count, target_activity_path(@target, activity) %>
+    <%= link_to 'edit', edit_target_activity_path(@target, activity) %>
+    <%= button_to 'delete', target_activity_path(@target, activity), :method => :delete %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to 'new action', new_target_activity_path %>

@@ -1,0 +1,4 @@
+<%= form_for @activity, :url => target_activities_path(@target) do |f| %>
+	<%= f.text_field :count %>
+	<%= f.submit "Create" %>
+<% end %>

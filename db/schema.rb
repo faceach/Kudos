@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110703101640) do
+ActiveRecord::Schema.define(:version => 20110712135248) do
 
-  create_table "actions", :force => true do |t|
+  create_table "activities", :force => true do |t|
     t.integer  "target_id"
     t.integer  "metadata_id"
     t.integer  "user_id"
     t.integer  "sequence_no"
-    t.integer  "action_count"
+    t.integer  "count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -10,11 +9,9 @@
     <link type="image/x-icon" rel="Shortcut Icon" href="favicon.ico" />
     <link type="image/x-icon" rel="Bookmark" href="favicon.ico" />
 
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-
+    <!--meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/-->
     
   <%= stylesheet_link_tag :zhuomi %>
-  <%= javascript_include_tag :zhuomi %>
   <%= csrf_meta_tag %>
 
 </head>
@@ -24,7 +21,7 @@
             <div class="col-l nohand">
                 <h1 class="col-l">
                     <a href="#this" id="logo" class="col-l">
-                        <img src="../images/high/logo.png" alt="啄米" />
+                        <img src="/images/high/logo.png" alt="啄米" />
                     </a>
                 </h1>
                 <div class="col-l ml-5">
@@ -36,9 +33,8 @@
     </div>
     <p class="shoulder"></p>
     <div id="wrapper" class="pw align-c">
-
-<%= yield %>
- </div>
+		<%= yield %>
+ 	</div>
     <div id="footer" class="pw align-c">
         <p class="col-r">
             天才，都TM是练出来的
@@ -63,10 +59,6 @@
             </div>
         </div>
     </div>
-
-</body>
-</html>
-
-
+	<%= javascript_include_tag :zhuomi %>
 </body>
 </html>
