@@ -7,24 +7,29 @@
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-(function($) {
+(function ($) {
 
-    var Form = function() {
+    var Form = function () {
 
-        var hint = function() {
+        var hint = function () {
             ZM.Dom.textHint('#input-password', '#input-password-hint', true);
             ZM.Dom.textHint('#input-mail', '#input-mail-hint', true);
         };
 
-        this.init = function() {
+        var autoFocus = function () {
+            $("#input-mail").focus();
+        };
+
+        this.init = function () {
             hint();
+            autoFocus();
         };
 
     };
 
     ZM.UI.Login = {
 
-        init: function() {
+        init: function () {
 
             var form = new Form;
             form.init();
