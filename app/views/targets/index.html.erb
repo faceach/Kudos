@@ -1,9 +1,5 @@
-<% @targets.each do |target| %>
-  <li>
-    <%= link_to target.target_count, target_activities_path(target) %>
-    <%= button_to 'delete', target_path(target), :method => :delete %>
-  </li>
-<% end %>
+<ul>
+<%= render :partial => "target", :collection => @targets %>
 </ul>
  
 <%= link_to 'new target', new_target_path %>
