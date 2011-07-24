@@ -1,4 +1,7 @@
-<li>
-	<%= link_to target.target_count, target_activities_path(target) %>
-	<%= button_to 'delete', target_path(target), :method => :delete %>
-</li>
+
+<a href="#this" class="ph-<%=target.target_count%> col-l ml-35">
+  <span class="ph-txt">
+    <span class="ph-val"><%=target.target_count%></span>
+    <span class="ph-unit"><%=target.metadata.name%></span>
+  </span>
+</a>

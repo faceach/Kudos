@@ -6,9 +6,9 @@
 /* + Plan CSS - Begin */
 
     /* - Plan Hour Box */
-    .ph-one,
-    .ph-ten,
-    .ph-hdrd
+    .ph-1,
+    .ph-10,
+    .ph-100
     {
         display: inline-block;
         padding-bottom: 2px;
@@ -16,22 +16,22 @@
         border-bottom: 4px solid #fff;
         cursor: pointer;
     }
-    .ph-one
+    .ph-1
     {
         margin-left: 0;
     }
-    .ph-one:hover,
-    .ph-one.active
+    .ph-1:hover,
+    .ph-1.active
     {
         border-bottom: 4px solid #fdc51a;
     }
-    .ph-ten:hover,
-    .ph-ten.active
+    .ph-10:hover,
+    .ph-10.active
     {
         border-bottom: 4px solid #f3a216;
     }
-    .ph-hdrd:hover,
-    .ph-hdrd.active
+    .ph-100:hover,
+    .ph-100.active
     {
         border-bottom: 4px solid #f37916;
     }
@@ -46,15 +46,15 @@
         border-radius: 6px;
         line-height: 1.2em;
     }
-    .ph-one .ph-txt
+    .ph-1 .ph-txt
     {
         background-color: #fdc51a;
     }
-    .ph-ten .ph-txt
+    .ph-10 .ph-txt
     {
         background-color: #f3a216;
     }
-    .ph-hdrd .ph-txt
+    .ph-100 .ph-txt
     {
         background-color: #f37916;
     }

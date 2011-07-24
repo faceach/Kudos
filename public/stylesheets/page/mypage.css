@@ -40,32 +40,36 @@
 }
 
     /* - Plan Hour Box */
-    .ph-one,
-    .ph-ten,
-    .ph-hdrd
+	#fnb-planlist .ml-35
+	{
+		margin-left: 35px;
+	}
+    .ph-1,
+    .ph-10,
+    .ph-100
     {
         display: inline-block;
         padding-bottom: 2px;
         border-bottom: 2px solid #f4f3f3;
     }
-    a.ph-one,
-    a.ph-ten,
-    a.ph-hdrd
+    a.ph-1,
+    a.ph-10,
+    a.ph-100
     {
         cursor: pointer;
     }
-    a.ph-one:hover,
-    a.ph-one.active
+    a.ph-1:hover,
+    a.ph-1.active
     {
         border-bottom: 2px solid #fdc51a;
     }
-    a.ph-ten:hover,
-    a.ph-ten.active
+    a.ph-10:hover,
+    a.ph-10.active
     {
         border-bottom: 2px solid #f3a216;
     }
-    a.ph-hdrd:hover,
-    a.ph-hdrd.active
+    a.ph-100:hover,
+    a.ph-100.active
     {
         border-bottom: 2px solid #f37916;
     }
@@ -82,15 +86,15 @@
         -webkit-border-radius: 6px;
         border-radius: 6px;
     }
-    .ph-one .ph-txt
+    .ph-1 .ph-txt
     {
         background-color: #fdc51a;
     }
-    .ph-ten .ph-txt
+    .ph-10 .ph-txt
     {
         background-color: #f3a216;
     }
-    .ph-hdrd .ph-txt
+    .ph-100 .ph-txt
     {
         background-color: #f37916;
     }

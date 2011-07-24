@@ -11,6 +11,13 @@ class TargetsController < ApplicationController
     
   end
   
+  def show
+     @user = User.find(session[:user_id])
+     @targets = @user.targets.all
+    
+  end
+  
+  
   def create
     @target = Target.new(params[:target])
     @target.category = Category.find_by_name("running")
