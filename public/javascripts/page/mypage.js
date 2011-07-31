@@ -153,7 +153,7 @@
                 if (!$(this).hasClass(cssClass)) {
 					var args = {
 						target_id: $("#fnb-hour .ph-target-id").val(),
-						count: 2,
+						count: $(".formbox #fnb-input").val(),
 						authenticity_token: $("#fnb-hour .ph-authenticity").val()
 						};
 					var callback = "";
