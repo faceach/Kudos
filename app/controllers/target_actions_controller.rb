@@ -20,10 +20,10 @@ class TargetActionsController < ApplicationController
      @activity = Activity.new
      @activity.target = @target
      @activity.count = params[:count]
-     @activity.metadata = Metadata.find_by_name("hour")
+     @activity.metadata = Metadata.find_by_name("minitue")
      @activity.user_id = session[:user_id]
      
-     @last = @target.activities.order("id desc").first
+     @last = @target.activities.last
      if(@last != nil && @last.sequence_no != nil)
        @activity.sequence_no = @last.sequence_no + 1
      else

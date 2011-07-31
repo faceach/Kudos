@@ -1,7 +1,8 @@
 class TargetsController < ApplicationController
   
+  before_filter :find_user, :only => [ :index, :show, :create]
+  
   def index 
-    @user = User.find(session[:user_id])
     @targets = @user.targets.all
     
   end
@@ -12,7 +13,6 @@ class TargetsController < ApplicationController
   end
   
   def show
-     @user = User.find(session[:user_id])
      @targets = @user.targets.all
     
   end
@@ -24,7 +24,7 @@ class TargetsController < ApplicationController
     @target.metadata = Metadata.find_by_name("hour")
     @target.user_id = session[:user_id]
     @target.status = "active"
-    @last = Target.order("id desc").where("user_id = ?", session[:user_id]).first
+    @last = @user.targets.last
     
     if(@last != nil && @last.sequence_no != nil)
       @target.sequence_no = @last.sequence_no + 1
@@ -45,6 +45,12 @@ class TargetsController < ApplicationController
     @target.destroy
 
     redirect_to targets_url
+  end
+  
+  protected
+
+  def find_user
+    @user = User.find(session[:user_id])
   end
   
 end
