@@ -16,7 +16,10 @@ class TargetActionsController < ApplicationController
    end
    
    def create
-     @activity = @target.activities.build(params[:activity])
+     #@activity = @target.activities.build(params[:activity])
+     @activity = Activity.new
+     @activity.target = @target
+     @activity.count = params[:count]
      @activity.metadata = Metadata.find_by_name("hour")
      @activity.user_id = session[:user_id]
      
@@ -26,12 +29,25 @@ class TargetActionsController < ApplicationController
      else
        @activity.sequence_no = 1
      end
-
-     if @activity.save
-       redirect_to target_activities_url(@target)
-     else
-       render :action => :new
+     
+     respond_to do |format|
+       format.json do
+         if @activity.save
+           render :json => {result: "success"}
+           #render :json => @activity.to_json
+         else
+           render :json => {result: "fail"}
+         end
+       end
+       format.html do
+         if @activity.save
+           redirect_to target_activities_url(@target)
+         else
+           render :action => :new
+         end
+       end
      end
+
 
    end
    

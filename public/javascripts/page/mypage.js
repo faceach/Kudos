@@ -19,22 +19,25 @@
             $elBox.find(" > a").live("click", function() {
 
                 var val = $(this).find("span.ph-val").text();
+				var target_id = $(this).find("input.ph-target-id").val();
                 switch (val) {
                     case "1":
                     default:
                         $elHour.addClass("ph-1");
                         $elHour.find("span.ph-val").text(val);
+						$elHour.find("input.ph-target-id").val(target_id)
                         break;
                     case "10":
                         $elHour.addClass("ph-10");
                         $elHour.find("span.ph-val").text(val);
+						$elHour.find("input.ph-target-id").val(target_id)
                         break;
                     case "100":
                         $elHour.addClass("ph-100");
                         $elHour.find("span.ph-val").text(val);
+						$elHour.find("input.ph-target-id").val(target_id)
                         break;
                 }
-
                 $elBox.hide();
                 $elForm.show("fast").animate(
                     {
@@ -115,13 +118,46 @@
 
         };
 
+		var asyncSubmit = function(args, callback){
+			var url = "/targets/{0}/activities.json".format(args.target_id);
+			var args = args;
+			var param = {
+				url: url,
+				data: args,
+				type: "POST",
+				dataType: "json",
+				beforeSend : function(xhr){
+				       xhr.setRequestHeader("Accept", "application/json")
+				     },
+				success: function(data){
+					if(data && data.result === "success"){
+						typeof callback === "function"?callback():null;
+						// Reset Plan
+						var objPlan = new Plan();
+	                    objPlan.reset();
+					}
+					else{
+						alert("Error");
+					}
+				},
+				error: function(){
+					alert("Error");
+				}
+			};
+			$.ajax(param);
+		};
+		
         var clickSubmit = function() {
 
             $("#fnb-submit").click(function() {
                 if (!$(this).hasClass(cssClass)) {
-                    $("#fnb-input-submit").click();
-                    var objPlan = new Plan();
-                    objPlan.reset();
+					var args = {
+						target_id: $("#fnb-hour .ph-target-id").val(),
+						count: 2,
+						authenticity_token: $("#fnb-hour .ph-authenticity").val()
+						};
+					var callback = "";
+					asyncSubmit(args, callback);
                 }
                 return false;
             });

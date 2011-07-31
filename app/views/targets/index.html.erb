@@ -5,13 +5,15 @@
         <span class="txt-6xl bla col-l ml-10">我要更新：</span>
 		<%= render :partial => "target", :collection => @targets %>
       </div>
-      <form action="" id="form-function" class="clear hidden">
+      <form action="/targets/1/activities" id="form-function" class="clear hidden">
         <fieldset class="formbox">
           <legend class="hidden">烧</legend>
           <div id="fnb-hour" class="col-l ml-5">
             <span class="ph-txt">
               <span class="ph-val">1</span>
               <span class="ph-unit">小时</span>
+			  <input type="hidden" id="fnb-hidden-target-id" class="ph-target-id">
+			  <input type="hidden" id="fnb-hidden-authenticity" class="ph-authenticity" value="<%=form_authenticity_token %>">
             </span>
           </div>
           <div class="col-l ml-50 mt-30">
@@ -229,3 +231,8 @@
     </div>
   </div>
 </div>
+<script language="JavaScript" type="text/javascript"> 
+    // <![CDATA[
+	
+	// ]]>
+</script>
