@@ -1,8 +1,9 @@
 
 <a href="#this" class="ph-<%=target.target_count%> col-l ml-35">
   <span class="ph-txt">
-    <span class="ph-val"><%=target.target_count%></span>
-    <span class="ph-unit"><%=target.metadata.name%></span>
+    <span class="ph-val"><%=target.target_count %></span>
+    <span class="ph-unit"><%=target.metadata.name %></span>
+    <span class="ph-unit"><%=Target.calPer(target) %></span>
 	<%= hidden_field_tag 'tags_list', target.id, :class => 'ph-target-id'%>
   </span>
 </a>

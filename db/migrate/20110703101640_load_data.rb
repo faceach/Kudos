@@ -1,7 +1,7 @@
 class LoadData < ActiveRecord::Migration
   def self.up
     metadataHour = Metadata.find_by_name("hour")
-    metadataMin = Metadata.find_by_name("min")
+    metadataMin = Metadata.find_by_name("minute")
     cateNew = Category.find_by_name("running")
     
     if metadataHour == nil
@@ -13,7 +13,7 @@ class LoadData < ActiveRecord::Migration
     
     if metadataMin == nil
       metadataMin = Metadata.new
-      metadataMin.name = "minitue"
+      metadataMin.name = "minute"
       metadataMin.data_type = 1
       metadataMin.save
     end

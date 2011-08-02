@@ -20,7 +20,7 @@ class TargetActionsController < ApplicationController
      @activity = Activity.new
      @activity.target = @target
      @activity.count = params[:count]
-     @activity.metadata = Metadata.find_by_name("minitue")
+     @activity.metadata = Metadata.find_by_name("minute")
      @activity.user_id = session[:user_id]
      
      @last = @target.activities.last
