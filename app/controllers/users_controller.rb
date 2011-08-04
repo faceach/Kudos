@@ -22,15 +22,29 @@ class UsersController < ApplicationController
     session[:user_Id] = nil
     if request.post?
       user = User.authenticate(params[:email], params[:password])
-      if user
-        session[:user_id] = user.id
-        
-        if user.targets.count == 0
-          redirect_to new_target_path
-        else
-          redirect_to targets_path
-        end
-      end
+      
+      respond_to do |format|
+         format.json do
+           if user
+             render :json => {result: "Login success"}
+           else
+             render :json => {result: "Login fail"}
+           end
+         end
+         format.html do
+           if user
+             session[:user_id] = user.id
+
+             if user.targets.count == 0
+               redirect_to new_target_path
+             else
+               redirect_to targets_path
+             end
+           end
+         end
+       end
+      
+      
     end
   end
   

@@ -1,7 +1,7 @@
 class Target < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
-  has_many :activities
+  has_many :activities, :dependent => :destroy
   belongs_to :metadata
   
   def Target.calPer(target)
