@@ -3,6 +3,7 @@ class Target < ActiveRecord::Base
   belongs_to :user
   has_many :activities, :dependent => :destroy
   belongs_to :metadata
+  validates_numericality_of :target_count, :only_integer => true, :greater_than => 0  
   
   def Target.calPer(target)
     
@@ -23,6 +24,10 @@ class Target < ActiveRecord::Base
     
     return 0.0
       
+  end
+  
+  def as_json(options={})
+    super(:only => [:target_count, :status], :include => { :category => { :only => :name }, :metadata => {:only => :name} })
   end
   
 end

@@ -119,7 +119,7 @@
         };
 
 		var asyncSubmit = function(args, callback){
-			var url = "/targets/{0}/activities.json".format(args.target_id);
+			var url = "/targets/{0}/activities.json?user_id={1}".format(args.target_id, args.user_id);
 			var args = args;
 			var param = {
 				url: url,
@@ -153,6 +153,7 @@
                 if (!$(this).hasClass(cssClass)) {
 					var args = {
 						target_id: $("#fnb-hour .ph-target-id").val(),
+						user_id: $("#fnb-hour .ph-user-id").val(),
 						count: $(".formbox #fnb-input").val(),
 						authenticity_token: $("#fnb-hour .ph-authenticity").val()
 						};

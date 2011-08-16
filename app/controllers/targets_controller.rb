@@ -1,9 +1,27 @@
 class TargetsController < ApplicationController
   
-  before_filter :find_user, :only => [ :index, :show, :create]
+  before_filter :find_user_id, :only => [:create, :index]
   
   def index 
-    @targets = @user.targets.all
+    @user = User.find_by_id(@user_id)
+    respond_to do |format|
+      format.json do
+        if @user
+          @targets = @user.targets.all
+          if @targets
+            render :json => {:result => "success", :detail =>@targets}
+          else
+            render :json => {:result => "fail"}
+          end
+        else
+          render :json => {:result => "fail"}
+        end
+      end
+      format.html do
+        @targets = @user.targets.all
+        render :action => :index
+       end
+    end
     
   end
   
@@ -13,7 +31,7 @@ class TargetsController < ApplicationController
   end
   
   def show
-     @targets = @user.targets.all
+     #@targets = @user.targets.all
     
   end
   
@@ -22,9 +40,9 @@ class TargetsController < ApplicationController
     @target = Target.new(params[:target])
     @target.category = Category.find_by_name("running")
     @target.metadata = Metadata.find_by_name("hour")
-    @target.user_id = session[:user_id]
+    @target.user_id = @user_id
     @target.status = "active"
-    @last = @user.targets.last
+    @last = User.find_by_id(@user_id).targets.last
     
     if(@last != nil && @last.sequence_no != nil)
       @target.sequence_no = @last.sequence_no + 1
@@ -33,9 +51,23 @@ class TargetsController < ApplicationController
     end
     
     if @target.save
-      redirect_to targets_url
+      respond_to do |format|
+        format.json do
+          render :json => {:result => "success", :target =>@target}
+        end
+        format.html do
+          redirect_to targets_url
+        end
+      end
     else
-      render :action => :new
+      respond_to do |format|
+        format.json do
+          render :json => {:result => "fail"}
+        end
+        format.html do
+          render :action => :new
+        end
+      end
     end
     
   end
@@ -49,8 +81,15 @@ class TargetsController < ApplicationController
   
   protected
 
-  def find_user
-    @user = User.find(session[:user_id])
+  def find_user_id
+    respond_to do |format|
+      format.json do
+        @user_id = params[:user_id]
+      end
+      format.html do
+        @user_id = session[:user_id]
+      end
+    end
   end
   
 end

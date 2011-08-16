@@ -26,9 +26,9 @@ class UsersController < ApplicationController
       respond_to do |format|
          format.json do
            if user
-             render :json => {result: "Login success"}
+             render :json => {:result =>"success", :user_id => user.id }
            else
-             render :json => {result: "Login fail"}
+             render :json => {:result => "fail", :user_id => -1}
            end
          end
          format.html do
@@ -56,5 +56,6 @@ class UsersController < ApplicationController
       "application"
     end
   end
+
   
 end
