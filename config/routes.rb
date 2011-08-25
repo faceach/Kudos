@@ -1,6 +1,7 @@
 Demo::Application.routes.draw do
   get "users/login"
   post "users/login"
+  get "categories/hot"
   
   resources :events
   resources :targets do

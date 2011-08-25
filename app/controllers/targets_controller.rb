@@ -7,7 +7,8 @@ class TargetsController < ApplicationController
     respond_to do |format|
       format.json do
         if @user
-          @targets = @user.targets.all
+          #@targets = @user.targets.all
+          @targets = Target.includes(:metadata, :category)
           if @targets
             render :json => {:result => "success", :detail =>@targets}
           else
@@ -78,6 +79,7 @@ class TargetsController < ApplicationController
 
     redirect_to targets_url
   end
+
   
   protected
 
