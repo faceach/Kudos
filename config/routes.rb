@@ -4,6 +4,7 @@ Demo::Application.routes.draw do
   get "categories/hot"
   
   resources :events
+  resources :categories
   resources :targets do
     resources :activities, :controller => 'target_actions'
   end 

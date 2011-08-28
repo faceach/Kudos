@@ -5,4 +5,9 @@ class Category < ActiveRecord::Base
   def self.loadRunning()
     category = Category.find_by_
   end
+  
+  def as_json(options={})
+    super(:only => [:id, :name])
+  end
+  
 end

@@ -50,6 +50,8 @@
                     <p class="txt-4xl bla mt-20">真的准备好了？</p>
 					<%= form_for @target, :url => targets_path do |f| %>
 						<%= f.hidden_field :target_count %>
+						<%= f.text_field :category_id %>
+						<%= f.text_field :metadata_id %>
 						<br />
 					<p class="mt-18">
                         <a href="#this" class="btn-yes outerglow" onclick="submitForm();">
