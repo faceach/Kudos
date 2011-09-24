@@ -31,13 +31,14 @@ module Demo
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:zhuomi] = %w(jquery common base config page/login page/plan page/reg page/mypage ui/footer ui/form ui/plan)
+    #config.action_view.javascript_expansions[:zhuomi] = %w(jquery common base config page/login page/plan page/reg page/mypage ui/footer ui/form ui/plan)
 
-    config.action_view.stylesheet_expansions[:zhuomi] = %w(base common frame page/plan page/reg page/mypage page/login)
+    #config.action_view.stylesheet_expansions[:zhuomi] = %w(base common frame page/plan page/reg page/mypage page/login)
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.assets.enabled = true
   end
 end
