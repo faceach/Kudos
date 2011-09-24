@@ -8,7 +8,7 @@
 {
     height: 207px;
     margin-top: 11.6em;
-    background: url(/images/high/logo_bg_l.png) left bottom repeat-x;
+    background: url(/assets/high/logo_bg_l.png) left bottom repeat-x;
 }
 #core
 {
@@ -96,6 +96,6 @@
     width: 64px;
     height: 51px;
     margin: 0 15px 10px 0;
-    background: url(/images/high/icon_read.png) left bottom repeat-x;
+    background: url(/assets/high/icon_read.png) left bottom repeat-x;
 }
 /* + Login CSS - End */
