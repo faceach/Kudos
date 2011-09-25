@@ -13,7 +13,7 @@
     padding-left: 80px;
     min-height: 250px;
     _height: 250px;
-    background: url(../../_imgs/high/icon_sumup.png) left center no-repeat;
+    background: url(/images/high/icon_sumup.png) left center no-repeat;
 }
 .form-createuser-action .gry
 {
@@ -49,7 +49,7 @@
     color: #fff;
     line-height: 2em;
     padding-right: 45px;
-    background: url(../../_imgs/high/icon_join.png) right center no-repeat;
+    background: url(/images/high/icon_join.png) right center no-repeat;
 }
 .btn-join-disable
 {

@@ -51,7 +51,7 @@ a.pur:hover         {   color: #61468b;    }
     display: inline-block;
     *display: inline;
     vertical-align: text-top;
-    background: url(../_imgs/high/icon_go.png) left bottom no-repeat;
+    background: url(/images/high/icon_go.png) left bottom no-repeat;
 }
 .bookmark
 {
@@ -63,11 +63,11 @@ a.pur:hover         {   color: #61468b;    }
 }
 .bkmk-sina
 {
-    background: url(../_imgs/high/bkmk_sina_dis.png) left top no-repeat;
+    background: url(/images/high/bkmk_sina_dis.png) left top no-repeat;
 }
 .bkmk-sina:hover
 {
-    background: url(../_imgs/high/bkmk_sina.png) left top no-repeat;
+    background: url(/images/high/bkmk_sina.png) left top no-repeat;
 }
 .remind
 {
@@ -75,7 +75,7 @@ a.pur:hover         {   color: #61468b;    }
     min-height: 22px;
     _height: 22px;
     padding-left: 30px;
-    background: url(../_imgs/high/icon_caution.png) left top no-repeat;
+    background: url(/images/high/icon_caution.png) left top no-repeat;
 }
 .remind-xl
 {
@@ -83,7 +83,7 @@ a.pur:hover         {   color: #61468b;    }
     min-height: 40px;
     _height: 40px;
     padding-left: 52px;
-    background: url(../_imgs/high/icon_caution_xl.png) left top no-repeat;
+    background: url(/images/high/icon_caution_xl.png) left top no-repeat;
 }
 .remind-xl p
 {
@@ -95,7 +95,7 @@ a.pur:hover         {   color: #61468b;    }
     min-height: 18px;
     _height: 18px;
     padding-left: 24px;
-    background: url(../_imgs/high/icon_safety.png) left top no-repeat;
+    background: url(/images/high/icon_safety.png) left top no-repeat;
 }
         
 /* - Position */
@@ -105,7 +105,7 @@ a.pur:hover         {   color: #61468b;    }
     padding-left: 20px;
     display: inline-block;
     *display: inline;
-    background: url(../_imgs/high/icon_position.png) left top no-repeat;
+    background: url(/images/high/icon_position.png) left top no-repeat;
 }
 
 /* - Activity Statistic */
