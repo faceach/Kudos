@@ -1,4 +1,4 @@
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ï»¿//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // File:            config.js
 // Defines:
@@ -20,24 +20,24 @@ ZM.Config = {
     Msg: {
 
         Format: {
-            mail: "ÓÊÏäÊäÈë´íÎó£¬ÇëÖØÊÔ",
-            username: "êÇ³ÆĞëĞ¡ÓÚ{0}¸ö×Ö·û",
-            password: "ÃÜÂë±ØĞëÔÚ6-16¸ö×Ö·ûÖ®¼ä"
+            mail: "é‚®ç®±è¾“å…¥é”™è¯¯ï¼Œè¯·é‡è¯•",
+            username: "æ˜µç§°é¡»å°äº{0}ä¸ªå­—ç¬¦",
+            password: "å¯†ç å¿…é¡»åœ¨6-16ä¸ªå­—ç¬¦ä¹‹é—´"
         },
 
         Valid: {
-            mail: "ÇëÊäÈëÓÊÏä",
-            username: "ÇëÊäÈëÓÃ»§Ãû£¬ÒÔ±ãÓÚÈÕºó½»Á÷",
-            password: "ÃÜÂë²»ÄÜÎª¿Õ",
-            numeric: "ÇëÊäÈëÊı×Ö",
-            outside: "³¬¹ı¸Ã¼Æ»®Ê±¼äÉÏÏŞ"
+            mail: "è¯·è¾“å…¥é‚®ç®±",
+            username: "è¯·è¾“å…¥ç”¨æˆ·åï¼Œä»¥ä¾¿äºæ—¥åäº¤æµ",
+            password: "å¯†ç ä¸èƒ½ä¸ºç©º",
+            numeric: "è¯·è¾“å…¥æ•°å­—",
+            outside: "è¶…è¿‡è¯¥è®¡åˆ’æ—¶é—´ä¸Šé™"
         }
 
     },
 
     Text: {
-        hour: "Ğ¡Ê±",
-        minute: "·ÖÖÓ"
+        hour: "å°æ—¶",
+        minute: "åˆ†é’Ÿ"
     },
 
     Value: {
@@ -50,552 +50,552 @@ ZM.Config = {
 var testPlanListData = [
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         },
         {
             planId: 1,
-            planName: "ÅÜ²½",
+            planName: "è·‘æ­¥",
             planImgUrl: "run.png"
         },
         {
             planId: 2,
-            planName: "¼õ·Ê",
+            planName: "å‡è‚¥",
             planImgUrl: "loseweight.png"
         },
         {
             planId: 3,
-            planName: "ÂÃĞĞ",
+            planName: "æ—…è¡Œ",
             planImgUrl: "travel.png"
         },
         {
             planId: 4,
-            planName: "Ñ§Ï°",
+            planName: "å­¦ä¹ ",
             planImgUrl: "study.png"
         },
         {
             planId: 5,
-            planName: "ÔË¶¯",
+            planName: "è¿åŠ¨",
             planImgUrl: "sports.png"
         }
     ];
