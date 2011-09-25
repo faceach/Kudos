@@ -14,7 +14,7 @@ ZM.Config = {
 
     Url: {
         activate: "./activate.htm",
-        icons: "_imgs/icons/"
+        icons: "/assets/icons/"
     },
 
     Msg: {
