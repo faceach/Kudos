@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-gem "rake", "0.8.7"
+gem "rake", "0.9.2"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -17,6 +17,9 @@ gem 'kaminari'
 
 # To use debugger
 # gem 'ruby-debug'
+
+# To use devise
+gem "devise"
 
 # Bundle the extra gems:
 # gem 'bj'

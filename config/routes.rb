@@ -1,4 +1,6 @@
 Demo::Application.routes.draw do
+  #devise_for :users#, :skip => :all
+
   get "users/login"
   post "users/login"
   get "categories/hot"
