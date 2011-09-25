@@ -16,6 +16,35 @@
 
 </head>
 <body>
+    <div id="header">
+        <div id="topbar" class="pw align-c pos-rel">
+            <div id="topbar-login" class="topbar-content hidden">
+                <div class="cf">
+    	            <h2 class="whi txt-3xl col-l">你好，请从这里登录！</h2>
+    	            <a class="tb-login-forgetpass pur ml-10 hand">忘记密码</a>
+                </div>
+    	        <form id="loginform" class="clear mt-10 ml-45">
+    		        <label for="loginform-username" class="pur">用户名：</label>
+    		        <input type="text" id="loginform-username" class="fb-input outerglow">
+    		        <label for="loginform-password" class="pur ml-5">密码：</label>
+    		        <input type="text" id="loginform-password" class="fb-input outerglow">
+                    <input type="button" value="登录" class="loginform-submit whi ml-15 hand" />
+    	        </form>
+            </div>
+            <ul id="topbar-menu" class="pos-abs hor whi">
+                <li>
+                    <a href="#topbar-login" class="hand">登录</a>
+                </li>
+            </ul>
+    	    <a id="topbar-btn-close" class="hand pos-abs pur hidden">关闭登录</a>
+        </div>
+		<div id="head" class="pw align-c cf">
+	    	<h1 id="logo" class="col-l">
+                <img src="_imgs/high/logo.png" alt="啄米网" title="死磕是一种精神" />
+	        	<p class="txt-m">死磕是一种精神</p>
+	    	</h1>
+		</div>
+	</div>
 	<%= yield %>
 	<%= javascript_include_tag :application %>
 </body>

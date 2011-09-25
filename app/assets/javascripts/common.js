@@ -10,9 +10,6 @@
 // Namespace: ZM
 window.ZM = window.ZM || {};
 
-ZM.UI = {};
-ZM.DI = {};
-
 /* +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ */
 /* Base - Begin */
 
@@ -237,12 +234,12 @@ ZM.Base = {
 /* Base - End */
 
 /* +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ */
-/* Dom - Begin */
+/* Form - Begin */
 
-ZM.Dom = {
+ZM.Form = {
 
     /* Input Text Hint */
-    textHint: function(elObj, elHint, isLabelHint) {
+    textHint: function (elObj, elHint, isLabelHint) {
 
         isLabelHint = typeof isLabelHint !== "undefined" ? isLabelHint : false;
 
@@ -252,24 +249,16 @@ ZM.Dom = {
         $elObj.val('');
 
         $elHint.bind({
-            'focus click': function() {
+            'focus click': function () {
                 $(this).hide();
                 $elObj.show().focus();
-            },
-            blur: function() {
-                if ($.trim($elObj.val()) === "") {
-                    if (!isLabelHint) {
-                        $elObj.hide();
-                    }
-                    $(this).show();
-                }
             }
         });
         $elObj.bind({
-            focus: function() {
+            focus: function () {
                 $elHint.hide();
             },
-            blur: function() {
+            blur: function () {
                 if ($.trim($(this).val()) === "") {
                     if (!isLabelHint) {
                         $elObj.hide();
@@ -281,7 +270,7 @@ ZM.Dom = {
     },
 
     /* Mail Validate */
-    mailValid: function(mail) {
+    mailValid: function (mail) {
         var regx = /^([a-zA-Z0-9]|[._])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
         if (!regx.test(mail)) {
             return false;
@@ -291,4 +280,4 @@ ZM.Dom = {
 
 };
 
-/* Dom - End */
+/* Form - End */

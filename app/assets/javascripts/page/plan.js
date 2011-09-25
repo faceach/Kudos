@@ -1,15 +1,34 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-// File:            plan.js
+// File:            x.js
 // Defines:
 // Dependencies:
-// Description:     this is the document ready functions for plan page
+// Description:     load js for x page
 //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Document Ready.
-jQuery(function($) {
+// Closure
+(function ($) {
 
-    ZM.UI.Plan.init();
+
+})(jQuery);
+
+// Document Ready.
+jQuery(function ($) {
+
+    var objPlanList = new ZM.PlanList({ $container: $("div.planlist-container"), visibleNum: 6 });
+    objPlanList
+        .render(testPlanListData)
+        .select(function (i) { console.log("select " + i); }, 0)
+        .nav(function (i) { console.log("move to " + i + " paragraph"); });
 
 });
+
+// Window Onload.
+ZM.windowOnload = window.onload;
+window.onload = function () {
+    if (ZM.windowOnload) {
+        ZM.windowOnload();
+    }
+    // Your code here
+};

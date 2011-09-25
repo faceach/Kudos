@@ -1,44 +1,38 @@
-<style>
-	html    { background-color: #00aff0; }
-	.pw     { width: 682px; }
-</style>
-<div id="wrapper" class="pw align-c">
-    <div id="visual">
-        <h1 class="txtindent">啄米</h1>
-        <div id="core" class="col-l">
-            <p class="yel txt-3xl">Beta</p>
-            <p class="whi txt-4xl mt-3">收集，分类和交流你的日常数据</p>
+<div id="main">
+    <div id="titlebar">
+        <div class="pw align-c cf">
         </div>
     </div>
-	<% form_tag("/users/login",:class => "clear", :id => "form-login" ) do%>
-	    <fieldset class="formbox">
-	        <legend class="hidden">登录</legend>
-	        <div class="">
-	            <p class="col-l pos-rel">
-	                <label id="input-mail-hint" class="txt-3xl gry pos-abs fl-label" for="input-mail">电子邮件</label>
-					<%= text_field_tag :email, params[:email], :id => "input-mail", :class => "txt-3xl gry fl-input outerglow" %>
-	            </p>
-	            <p class="col-l pos-rel ml-8">
-	                <label id="input-password-hint" class="txt-3xl gry pos-abs fl-label" for="input-password">登录密码</label>
-					<%= text_field_tag :password, params[:password], :id => "input-password", :class => "txt-3xl gry fl-input outerglow"%>
-	            </p>
-				<%= submit_tag "登录", :id => "btn-login", :class => "fl-button whi txt-3xl ml-10 col-r" %>
-	        </div>
-	    </fieldset>
-	<% end%>
-    <div id="dailytopic" class="mt-18">
-        <div class="col-l dt-icon-read"></div>
-        <h2 class="whi txt-l bold">啄米每天在进步</h2>
-        <p class="whi mt-5">高雄有所记载的历史可远溯至荷属时期前的明朝。15世纪以前，打狗屿本为平埔族西拉雅族的分支马卡道族的居住地。15世纪左右，此地的马卡道族为抵御来犯的日本倭寇与中国海盗，以遍植刺竹的方式作为防御工事，并将地名取为“竹林”，汉化译称为“打狗”或“打鼓”。台湾日治时期后，台湾总督府官方觉得“打狗”的名字不雅，将其改名为日文的近似音“高雄”。据目前考古调查，打狗地区有人类活动的纪录可追溯到在约7000年前。而正式明文记载的文献则是出现在1603年，当时明朝将军沈有容，率水师到澎湖、台湾追剿倭寇，随军福建人陈第著东番记，称高雄为“打狗屿”。</p>
+    <div id="content" class="pw align-c">
+        <div id="container" class="txtalign-c">
+            <div class="applybox align-c">
+                <div class="welcometip pos-rel">
+                    <h2 class="whi">
+                        欢迎来<strong class="pur ml-15">啄米</strong>
+                    </h2>
+                    <p class="italic whi txt-xl">我们就快发布了！</p>
+                    <span class="welcometip-prong pos-abs"></span>
+                </div>
+                <p class="pur txt-3xl mt-45">欢迎来到啄米网，将你的计划记录下来与以后的你和你的朋友分享</p>
+                <p class="italic gra mt-10 txtalign-l ml-40 mr-40">是否有一个计划或梦想？是否想在执行的时候需要有个地方将过程纪录下来？啄米为你提供了一个平台来纪录你每天的脚步，和你一起分享成功路上的喜悦。</p>
+                <div class="mt-60 align-c applyformbox pos-rel outerglow">
+                    <form id="applyform" class="cf">
+                        <label for="applyform-email" id="applyform-email-hint" class="gry pos-abs">输入您的电子邮件地址</label>
+                        <input type="text" id="applyform-email" class="fb-input mgry" />
+                        <div class="applyform-button col-l">
+                            <input type="button" value="加入啄米" id="applyform-submit" class="whi hand txt-xl" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="pw align-c cf">
+                    <span class="footer-siteinfo">&copy;&nbsp;2011&nbsp;啄米网&nbsp;沪ICP备198003220号&nbsp;</span>
+                    <a class="footer-weibo ml-5 hand">关注啄米网：</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <form action="" id="form-invite" class="clear mt-30 txtalign-c">
-        <fieldset class="formbox">
-            <legend class="hidden">申请邀请码</legend>
-            <input id="input-invite" type="text" class="txt-3xl gry fl-input outerglow" />
-            <input type="submit" value="申请邀请码" id="btn-invite" class="fl-button whi txt-3xl ml-10" />
-        </fieldset>
-    </form>
-    <p class="whi txtalign-c mt-50">copyrights &copy; 2011 啄米科技</p>
 </div>
 
 

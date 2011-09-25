@@ -4,391 +4,188 @@
 ========================================================*/
 
 /* + Mypage CSS - Begin */
-#mypage .col-w
+.col-w
 {
-    width: 70.8%;
+    width: 75%;
 }
-#mypage .col-n
+.col-n
 {
-    width: 28%;
-}
-
-#functionbox
-{
-    min-height: 102px;
-    _height: 102px;
-    padding: 15px 0 25px 25px;
-    background: url(/assets/high/bg_fn.png) left bottom repeat-x;
-    overflow: hidden;
-    position: relative;
-}
-#form-function
-{
-    position: absolute;
-    top: 15px;
-    left: 100%;
-}
-#fnb-input
-{
-    border: 1px solid #cbcbcb;
-    border-bottom-color: #dbdbdb;
-    font-size: 170%;
-    padding: 0 5px;
-    width: 120px;
-    color: #f37916;
-    text-align: center;
+    width: 22%;
 }
 
-    /* - Plan Hour Box */
-	#fnb-planlist .ml-35
-	{
-		margin-left: 35px;
-	}
-    .ph-1,
-    .ph-10,
-    .ph-100
-    {
-        display: inline-block;
-        padding-bottom: 2px;
-        border-bottom: 2px solid #f4f3f3;
-    }
-    a.ph-1,
-    a.ph-10,
-    a.ph-100
-    {
-        cursor: pointer;
-    }
-    a.ph-1:hover,
-    a.ph-1.active
-    {
-        border-bottom: 2px solid #fdc51a;
-    }
-    a.ph-10:hover,
-    a.ph-10.active
-    {
-        border-bottom: 2px solid #f3a216;
-    }
-    a.ph-100:hover,
-    a.ph-100.active
-    {
-        border-bottom: 2px solid #f37916;
-    }
-    .ph-txt
-    {
-        color: #fff;
-        font-size: 330%;
-        display: inline-block;
-        line-height: 1.2em;
-        
-        padding: 10px 8px 9px;
-        
-        -moz-border-radius: 6px;
-        -webkit-border-radius: 6px;
-        border-radius: 6px;
-    }
-    .ph-1 .ph-txt
-    {
-        background-color: #fdc51a;
-    }
-    .ph-10 .ph-txt
-    {
-        background-color: #f3a216;
-    }
-    .ph-100 .ph-txt
-    {
-        background-color: #f37916;
-    }
-    .ph-val,
-    .ph-unit
-    {
-        display: block;
-        text-align: center;
-        width: 100px;
-        line-height: 1.4em;
-    }
-    .ph-unit
-    {
-        text-align: right;
-        font-size: 43%;
-    }
-    
-
-/* + Right Side */
-#profilebox
-{
-    width: 92%;
-    margin: 0 0 0 5px;
-    padding: 0 5px 15px;
-    border-bottom: 1px dotted #16c4f3;
-}
-.pb-headshot
-{
-}
-.pb-hs-img
-{
-    border: 1px solid #cacaca;
-    display: block;
-    line-height: 0;
-}
-.pb-hs-edit
-{
-    bottom: 0;
-    right: 0;
-    background: #a6a7a7;
-    display: block;
-    padding: 2px 3px 1px;
-}
-.pb-name
-{
-    padding-right: 16px; 
-    background: url(/assets/high/icon_male.png) right center no-repeat;
-}
-#addupbox
-{
-    background-color: #f4f3f3;
-    padding: 10px 0 10px 20px;
-    
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    
-}
-#activitystatusbox ul li
-{
-    clear: both;
-    margin: 10px 0 0 0;
-}
-.asb-icon
-{
-    width: 50px;
-    color: #fff;
-    text-align: center;
-    font-size: 150%;
-    line-height: 1.3em;
-    
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-}
-.asb-one .asb-icon,
-.asb-one .asb-bar-progress
-{
-    background-color: #fdc51a;
-}
-.asb-ten .asb-icon,
-.asb-ten .asb-bar-progress
-{
-    background-color: #f3a216;
-}
-.asb-hdrd .asb-icon,
-.asb-hdrd .asb-bar-progress
-{
-    background-color: #f37916;
-}
-
-.asb-bar
-{
-    width: 180px;
-    height: 5px;
-    background-color: #fff;
-    border: 1px solid #9c9c9c;
-    margin: 8px 0 0 13px;
-}
-.asb-bar-progress
-{
-    height: 5px;
-}
-.asb-one .asb-bar-progress
+/* + My Plan List */
+#myplanlist
 {
     width: 80%;
 }
-.asb-ten .asb-bar-progress
-{
-    width: 30%;
-}
-.asb-hdrd .asb-bar-progress
-{
-    width: 15%;
-}
-.asb-giveup
-{
-    display: none;
-    position: relative;
-    margin: 2px 0 0 5px;
-}
-.asb-giveup:hover
-{
-    text-decoration: none;
-}
-.asb-gu-prompt
-{
-    display: none;
-    position: absolute;
-    top: -1.5em;
-    left: -2em;
-    white-space: nowrap;
-    background-color: #ffde76;
-    padding: 2px 3px;
-    font-size: 88%;
-    color: #000;
-}
 
-/* + Feeds */
-.pg-title-feeds
+/* + Title Bar */
+#titlebar
 {
-    border-bottom: 1px solid #4acff3;
+    padding: 9px 0 25px 0;
 }
-.pg-title-feeds h2
+#titlebar-tip
 {
-    padding-left: 33px;
-    min-height: 29px;
-    _height: 29px;
-    line-height: 29px;
-    background: url(/assets/high/icon_chat.png) left center no-repeat;
-}
-#plantype
-{
-    right: 0;
-    bottom: -1px;
-}
-#plantype li
-{
-}
-#plantype li.active
-{
-    background-color: #fff;
-    border: 1px solid #4acff3;
-    border-bottom-width: 0;
-}
-#plantype li a
-{
-    color: #a6a7a7;
-    display: block;
-    line-height: 1.4em;
-    padding: 0 8px 0 7px;
-}
-#plantype li.active a
-{
-    color: #16c4f3;
-}
-#plantype li.pf-all a
-{
-    padding-left: 23px;
-    background: url(/assets/high/icon_all.png) 10px center no-repeat;
-}
-#plantype li.pf-one a
-{
-    padding-left: 31px;
-    background: url(/assets/high/icon_one.png) 10px center no-repeat;
-}
-#plantype li.pf-ten a
-{
-    padding-left: 31px;
-    background: url(/assets/high/icon_ten.png) 10px center no-repeat;
-}
-#plantype li.pf-hdrd a
-{
-    padding-left: 31px;
-    background: url(/assets/high/icon_hdrd.png) 10px center no-repeat;
-}
-
-.fb-list li
-{
-    border-left: 1px solid #16c4f3;
-    padding: 0 10px 0 9px;
-}
-.fb-list li.first
-{
-    border-left-width: 0;
-    padding-left: 0;
-}
-
-#fb-search
-{
-    line-height: 1.6em;
-    height: 1.6em;
-    border: 1px solid #cbcbcb;
-    padding-left: 20px;
-    background: url(/assets/high/icon_search.png) 3px center no-repeat;
-    
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding-left: 15px;
+    border: 1px solid #61468b;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
+    background-color: #61468b;
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(100% 100% 90deg, #61468b, #9d81c8); 
+    /* Safari 4-5, Chrome 1-9 */
+    /* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9d81c8), to(#61468b)); 
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(#9d81c8, #61468b); 
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(#9d81c8, #61468b);
+    -moz-box-shadow: 1px 3px 8px #666;
+    -webkit-box-shadow: 1px 3px 8px #666;
+    box-shadow: 1px 3px 8px #666;
 }
-.btn-fb-clear
+#titlebar-tip p
 {
-    top: 2px;
-    right: 2px;
-    width: 16px;
-    height: 17px;
-    background: url(/assets/high/icon_clear.png) left center no-repeat;
+    padding: 10px 10px 10px 30px;
+    background: url(../../_imgs/high/icon_tip_light.png) left center no-repeat;
+}
+.titlebar-tip-btn-close
+{
+    width: 18px;
+    height: 18px;
+    display: block;
+    left: -8px;
+    top: -8px;
+    background: url(../../_imgs/high/icon_tip_close.png) left center no-repeat;
 }
 
-
-.fb-record
+/* + Publish Box */
+#publishbox
 {
-    margin-top: 10px;
-    padding-bottom: 12px;
-    border-bottom: 1px dotted #16c4f3;
+    background-color: #ebedec;
+    border: 1px solid #d8d8d8;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 18px 22px 10px 30px;
 }
-#feedsbox .last
+.publishbox-prong
 {
-    border-bottom-width: 0;
+    background: url(../../_imgs/high/icon_prong_up.png) left top no-repeat;
+    width: 15px;
+    height: 13px;
+    left: 164px;
+    top: -13px;
 }
-.fb-r-container
+#publishbox .col-n
 {
-    margin-left: 6px;
-    width: 93%;
-    border-left: 1px solid #dadada;
-    padding-left: 6px;
+    width: 48%;
 }
-.fb-r-content
+#publishbox .col-w
 {
-    background-color: #f4f3f3;
-    padding: 6px 8px 10px 8px;
+    width: 50%;
 }
-.fb-r-state
+#publishbox-dragbar
 {
-    color: #a8a8a8;
+    width: 210px;
+    padding: 2px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #d8d8d8;
+    background-color: #9e9e9e;
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(100% 100% 90deg, #eaeaea, #9e9e9e); 
+    /* Safari 4-5, Chrome 1-9 */
+    /* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9e9e9e), to(#eaeaea)); 
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(#9e9e9e, #eaeaea); 
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(#9e9e9e, #eaeaea);
 }
-.fb-r-date
+#publishbox-dragbar .ui-slider-range
 {
-    color: #8b8b8b;
+    width: 0;
+    height: 14px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #e27b02;
+    background-color: #fa6400;
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(100% 100% 90deg, #fa6400, #fde5d5); 
+    /* Safari 4-5, Chrome 1-9 */
+    /* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fde5d5), to(#fa6400)); 
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(#fde5d5, #fa6400); 
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(#fde5d5, #fa6400);
 }
-.fb-r-me,
-.fb-r-plan,
-.fb-r-title
+#publishbox-dragbar .ui-slider-handle
 {
-    color: #f37916;
+    background: url(../../_imgs/high/icon_drag.png) left top no-repeat;
+    width: 43px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    margin-left: -21px;
+    top: -1px;
 }
-.fb-r-text
+#publishbox-input,
+#publishbox-input-hint
 {
-    line-height: 1.3em;
+    padding: 0 5px 0 10px;
+    width: 95%;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
 }
-.fb-r-action li
+#publishbox-add li a
 {
-    border-left: 1px solid #8b8b8b;
-    padding: 0 9px 0 10px;
+    margin-left: 30px;
+    color: #89898a;
+    padding-left: 25px;
+    line-height: 18px;
+    display: block;
 }
-.fb-r-action li.first
+#publishbox-add li.first a
 {
-    border-left-width: 0;
-    padding-left: 0;
+    margin-left: 0;
 }
-.fb-r-action li a
+.publishbox-add-emote a
 {
-    color: #8b8b8b;
+    background: url(../../_imgs/high/icon_emote.png) left top no-repeat;
 }
-
-
-#activitystatisticbox li
+.publishbox-add-photo a
 {
-    padding: 0 9px 0 10px;
-    border-left: 1px solid #c9c9c9;
+    background: url(../../_imgs/high/icon_photo.png) left top no-repeat;
 }
-#activitystatisticbox li.first
+.publishbox-add-sound a
 {
-    padding-left: 0;
-    border-left-width: 0;
+    background: url(../../_imgs/high/icon_sound.png) left top no-repeat;
 }
-/* + Mypage CSS - End */
+#publishbox-btn-publish
+{
+    line-height: 26px;
+    padding: 0 17px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #a2a2a2;
+    background-color: #ededed;
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(100% 100% 90deg, #ededed, #fff); 
+    /* Safari 4-5, Chrome 1-9 */
+    /* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ededed)); 
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(#fff, #ededed); 
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(#fff, #ededed);
+}

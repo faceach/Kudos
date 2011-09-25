@@ -82,10 +82,15 @@ a.flexwidth:hover       {   text-decoration: none;                              
 a.ndr,
 a.ndr:hover     {   text-decoration: none;  }
 .hidden         {   display: none;          }
+.block          {   display: block;         }
+.hidden-im      {   display: none!important;          }
+.block-im       {   display: block!important;         }
 .hand           {   cursor: pointer;        }
 .nohand         {   cursor: default;        }
 .ltspacing      {   letter-spacing: -1px;   }
 .txtindent      {   text-indent: -5000px; overflow: hidden;     }
+.inlineblock    {   display: inline-block; *display: inline; *zoom: 1;      }
+.zerolineheight {   line-height: 0;         }
 
 /* +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ */
 /* - Font Size */
@@ -120,6 +125,10 @@ html        {   -webkit-text-size-adjust: none;     }
 .mt-40      {   margin-top: 40px;   }
 .mt-45      {   margin-top: 45px;   }
 .mt-50      {   margin-top: 50px;   }
+.mt-60      {   margin-top: 60px;   }
+.mt-70      {   margin-top: 70px;   }
+.mt-80      {   margin-top: 80px;   }
+.mt-90      {   margin-top: 90px;   }
 
 .ml-1       {   margin-left: 1px;   }
 .ml-3       {   margin-left: 3px;   }
@@ -136,6 +145,10 @@ html        {   -webkit-text-size-adjust: none;     }
 .ml-40      {   margin-left: 40px;  }
 .ml-45      {   margin-left: 45px;  }
 .ml-50      {   margin-left: 50px;  }
+.ml-60      {   margin-left: 60px;  }
+.ml-70      {   margin-left: 70px;  }
+.ml-80      {   margin-left: 80px;  }
+.ml-90      {   margin-left: 90px;  }
 
 .mr-3       {   margin-right: 3px;  }
 .mr-5       {   margin-right: 5px;  }
@@ -205,3 +218,5 @@ a.blu:hover         {   color: #00f;    }
 .pur a,
 .pur a:hover,
 a.pur:hover         {   color: #f0f;    }
+
+/* + Base CSS - End */
