@@ -23,13 +23,13 @@
     text-indent: -100px;
     display: block;
     cursor: pointer;
-    background: url(/images/high/icon_dotnav.png) left top no-repeat;
+    background: url(/assets/high/icon_dotnav.png) left top no-repeat;
 }
 .dotnav li.select
 {
-    background-image: url(/images/high/icon_dotnav_select.png);
+    background-image: url(/assets/high/icon_dotnav_select.png);
 }
 .dotnav li.active
 {
-    background-image: url(/images/high/icon_dotnav_active.png);
+    background-image: url(/assets/high/icon_dotnav_active.png);
 }

@@ -18,7 +18,7 @@
     display: inline-block;
     *display: inline;
     padding: 0 28px 0 5px;
-    background: url(/images/high/icon_feeds.png) right center no-repeat;
+    background: url(/assets/high/icon_feeds.png) right center no-repeat;
 }
 .feedslist-record
 {
@@ -66,11 +66,11 @@
 {
     color: #fff;
     padding: 0 15px 0 0;
-    background: url(/images/high/icon_arrow_pure_r.png) right center no-repeat;
+    background: url(/assets/high/icon_arrow_pure_r.png) right center no-repeat;
 }
 .feeds-btn-showcomments.active span
 {
-    background-image: url(/images/high/icon_arrow_pure_d.png);
+    background-image: url(/assets/high/icon_arrow_pure_d.png);
 }
 .feeds-btnbox
 {
@@ -81,11 +81,11 @@
 {
     width: 13px;
     height: 14px;
-    background: url(/images/high/icon_heart_grey.png) left bottom no-repeat;
+    background: url(/assets/high/icon_heart_grey.png) left bottom no-repeat;
 }
 .feeds-btn-like.active
 {
-    background-image: url(/images/high/icon_heart_red.png);
+    background-image: url(/assets/high/icon_heart_red.png);
 }
 .feeds-btn-addcomments
 {
@@ -116,7 +116,7 @@
 .feedslist-comment-publish
 {
     padding: 0 0 0 35px;
-    background: url(/images/high/icon_comment.png) left center no-repeat;
+    background: url(/assets/high/icon_comment.png) left center no-repeat;
 }
 .feedslist-comment-inputbox
 {
@@ -146,7 +146,7 @@
     width: 35px;
     height: 26px;
     display: block;
-    background: url(/images/high/icon_emote_drop.png) 3px center no-repeat;
+    background: url(/assets/high/icon_emote_drop.png) 3px center no-repeat;
 }
 .feedslist-comment-content
 {

@@ -51,7 +51,7 @@
 #titlebar-tip p
 {
     padding: 10px 10px 10px 30px;
-    background: url(/images/high/icon_tip_light.png) left center no-repeat;
+    background: url(/assets/high/icon_tip_light.png) left center no-repeat;
 }
 .titlebar-tip-btn-close
 {
@@ -60,7 +60,7 @@
     display: block;
     left: -8px;
     top: -8px;
-    background: url(/images/high/icon_tip_close.png) left center no-repeat;
+    background: url(/assets/high/icon_tip_close.png) left center no-repeat;
 }
 
 /* + Publish Box */
@@ -75,7 +75,7 @@
 }
 .publishbox-prong
 {
-    background: url(/images/high/icon_prong_up.png) left top no-repeat;
+    background: url(/assets/high/icon_prong_up.png) left top no-repeat;
     width: 15px;
     height: 13px;
     left: 164px;
@@ -129,7 +129,7 @@
 }
 #publishbox-dragbar .ui-slider-handle
 {
-    background: url(/images/high/icon_drag.png) left top no-repeat;
+    background: url(/assets/high/icon_drag.png) left top no-repeat;
     width: 43px;
     height: 23px;
     position: absolute;
@@ -160,15 +160,15 @@
 }
 .publishbox-add-emote a
 {
-    background: url(/images/high/icon_emote.png) left top no-repeat;
+    background: url(/assets/high/icon_emote.png) left top no-repeat;
 }
 .publishbox-add-photo a
 {
-    background: url(/images/high/icon_photo.png) left top no-repeat;
+    background: url(/assets/high/icon_photo.png) left top no-repeat;
 }
 .publishbox-add-sound a
 {
-    background: url(/images/high/icon_sound.png) left top no-repeat;
+    background: url(/assets/high/icon_sound.png) left top no-repeat;
 }
 #publishbox-btn-publish
 {

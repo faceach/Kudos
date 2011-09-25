@@ -68,7 +68,7 @@ ul.hotplan-list li span
 {
     right: 10px;
     padding-right: 20px;
-    background: url(/images/high/icon_add.png) right center no-repeat;
+    background: url(/assets/high/icon_add.png) right center no-repeat;
 }
 ul.hotplan-list li:hover .hotplan-item-join
 {

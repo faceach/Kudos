@@ -32,7 +32,7 @@
     right: -12px;
     text-align: center;
     line-height: 23px;
-    background: url(/images/high/bg_num.png) left top no-repeat;
+    background: url(/assets/high/bg_num.png) left top no-repeat;
 }
 .pointsbox-name
 {
@@ -45,11 +45,11 @@
 {
     width: 14px;
     height: 17px;
-    background: url(/images/high/icon_male.png) right center no-repeat;
+    background: url(/assets/high/icon_male.png) right center no-repeat;
 }
 .pointsbox-gender-female
 {
-    background-image: url(/images/high/icon_female.png);
+    background-image: url(/assets/high/icon_female.png);
 }
 .pointsbox-bar
 {
@@ -95,7 +95,7 @@
 .pointsbox-like span
 {
     padding-right: 16px;
-    background: url(/images/high/icon_star.png) right center no-repeat;
+    background: url(/assets/high/icon_star.png) right center no-repeat;
 }
 
 #signature

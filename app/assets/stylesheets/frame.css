@@ -28,7 +28,7 @@
                 top: 8px;
                 line-height: 19px;
                 padding-right: 23px;
-                background: url(/images/high/icon_top_close.png) right top no-repeat;
+                background: url(/assets/high/icon_top_close.png) right top no-repeat;
             }
             /* - Menu */
             #topbar-menu
@@ -85,7 +85,7 @@
                 #topbar-login h2
                 {
                     padding-left: 45px;
-                    background: url(/images/high/icon_login.png) left top no-repeat;
+                    background: url(/assets/high/icon_login.png) left top no-repeat;
                 }
                 #topbar-login h2,
                 .tb-login-forgetpass
@@ -188,11 +188,11 @@
         .footer-weibo
         {
             padding: 2px 20px 0 0;
-            background: url(/images/high/bkmk_sina_dis.png) right top no-repeat;
+            background: url(/assets/high/bkmk_sina_dis.png) right top no-repeat;
         }
         .footer-weibo:hover
         {
-            background-image: url(/images/high/bkmk_sina.png);
+            background-image: url(/assets/high/bkmk_sina.png);
         }
     
     /* + Slide Navigation */
@@ -211,7 +211,7 @@
             height: 80px;
             left: 100px;
             top: 300px;
-            background: url(/images/high/slidenav_prev.png) left top no-repeat;
+            background: url(/assets/high/slidenav_prev.png) left top no-repeat;
         }
         #slidenav-btn-next
         {
@@ -220,7 +220,7 @@
             height: 80px;
             right: 100px;
             top: 300px;
-            background: url(/images/high/slidenav_next.png) left top no-repeat;
+            background: url(/assets/high/slidenav_next.png) left top no-repeat;
         }
     
 /* + Frame CSS - End */

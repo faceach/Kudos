@@ -12,7 +12,7 @@ html
 .applybox
 {
     width: 60%;
-    background: url(/images/high/login_reflection.png) center 90px no-repeat;
+    background: url(/assets/high/login_reflection.png) center 90px no-repeat;
 }
 .welcometip
 {
@@ -50,7 +50,7 @@ html
     height: 22px;
     bottom: -21px;
     left: 47%;
-    background: url(/images/high/icon_prong_down.png) left top no-repeat;
+    background: url(/assets/high/icon_prong_down.png) left top no-repeat;
 }
 /* + Apply Form */
 .applyformbox
@@ -113,7 +113,7 @@ div.applyformbox-err
     line-height: 32px;
     border-width: 0;
     padding: 0 25px 0 10px;
-    background: url(/images/high/icon_arrow_whi_r.png) right center no-repeat;
+    background: url(/assets/high/icon_arrow_whi_r.png) right center no-repeat;
 }
 
 /* + footer */
