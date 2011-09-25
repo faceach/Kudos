@@ -124,11 +124,13 @@ jQuery(function ($) {
         });
     };
 
-    validEmail();
-    validUserName();
-    validPassword();
-    check();
-    submit();
+    function () {
+        validEmail();
+        validUserName();
+        validPassword();
+        check();
+        submit();
+    }
 
 });
 
