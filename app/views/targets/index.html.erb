@@ -1,5 +1,6 @@
 <link type="text/css" rel="stylesheet" media="screen" href="/_styles/page/mypage.css">
-<div id="main">
+<input type="hidden" id="zm-userid" value="<%=session[:user_id]%>" />
+
     <div id="titlebar">
         <div class="pw align-c cf txtalign-c">
             <div id="titlebar-tip" class="pos-rel">
@@ -385,7 +386,7 @@
             </div>
 	    </div>
     </div>
-</div>
+
 <%= content_for :init do %>
 <script type="text/javascript" src="/_scripts/page/mypage.js"></script>
 <% end %>

@@ -27,7 +27,7 @@ class Target < ActiveRecord::Base
   end
   
   def as_json(options={})
-    super(:only => [:target_count, :status], :include => { :category => { :only => :name }, :metadata => {:only => :name} })
+    super(:only => [:target_count, :status], :include => { :category => { :only => [:id, :desc, :image, :name] }, :metadata => {:only => :name} })
   end
   
 end

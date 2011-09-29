@@ -9,8 +9,17 @@ class TargetsController < ApplicationController
         if @user
           #@targets = @user.targets.all
           @targets = Target.includes(:metadata, :category)
+          @categories = []
+          for target in @targets
+            @category = target.category
+            if !@categories.include?(target.category)
+              @categories << @category
+            end
+            @category.targets << target
+          end
+          
           if @targets
-            render :json => {:result => "success", :detail =>@targets}
+            render :json => {:result => "success", :detail =>@categories}
           else
             render :json => {:result => "fail"}
           end
@@ -32,18 +41,23 @@ class TargetsController < ApplicationController
   end
   
   def show
-     #@targets = @user.targets.all
+     @targets = @user.targets.all
     
   end
   
   
   def create
     @target = Target.new(params[:target])
-    @target.category = Category.find_by_name("running")
+    #@target.category = Category.find_by_name("running")
     @target.metadata = Metadata.find_by_name("hour")
     @target.user_id = @user_id
     @target.status = "active"
-    @last = User.find_by_id(@user_id).targets.last
+    @user = User.find_by_id(@user_id)
+    if @user == nil
+      render :json => {:result => "fail",:msg => @user_id + "can not find login user"}
+      return
+    end
+    @last = @user.targets.last
     
     if(@last != nil && @last.sequence_no != nil)
       @target.sequence_no = @last.sequence_no + 1
@@ -56,17 +70,11 @@ class TargetsController < ApplicationController
         format.json do
           render :json => {:result => "success", :target =>@target}
         end
-        format.html do
-          redirect_to targets_url
-        end
       end
     else
       respond_to do |format|
         format.json do
           render :json => {:result => "fail"}
-        end
-        format.html do
-          render :action => :new
         end
       end
     end
@@ -86,11 +94,12 @@ class TargetsController < ApplicationController
   def find_user_id
     respond_to do |format|
       format.json do
+        #@user_id = session[:user_id]
         @user_id = params[:user_id]
       end
       format.html do
-        #@user_id = session[:user_id]
-        @user_id = 1
+        @user_id = session[:user_id]
+        #@user_id = 1
       end
     end
   end

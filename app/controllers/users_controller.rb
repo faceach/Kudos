@@ -12,14 +12,15 @@ class UsersController < ApplicationController
     respond_to do |format|
        format.json do
          if @user.save
-           render :json => {:result =>"success", :user_id => user.id }
+           session[:user_id] = @user.id
+           render :json => {:result =>"success", :user_id => @user.id }
          else
            render :json => {:result => "fail", :user_id => -1}
          end
        end
        format.html do
          if @user.save
-           session[:user_id] = user.id
+           session[:user_id] = @user.id
 
            if @user.targets.count == 0
              redirect_to new_target_path

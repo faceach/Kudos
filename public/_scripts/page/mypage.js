@@ -16,6 +16,8 @@
 // Document Ready.
 jQuery(function ($) {
 
+		var userId = $("#zm-userid").val();
+		
         !function () {
             var $prong = $("div#publishbox > span.publishbox-prong");
             var defaultLeft = parseInt($prong.position().left);
@@ -68,6 +70,32 @@ jQuery(function ($) {
             };
             burnSlider(50, 180);
         } ();
+
+		// http://0.0.0.0:3000/targets
+		var param = {
+			url: "/targets?user_id=" + userId,
+			type: "GET",
+			datatype: "application/json",
+			success: function(data){
+				if(data && data.result === "success"){
+					debugger;
+					var cl = data.detail;
+					if(cl && cl.length > 0){
+						renderCategory(cl);
+					}
+					else{
+						console && console.log("No target");						
+					}
+				}
+				else{
+					console && console.log("Get target error");
+				}
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+					console && console.log("Get target error");
+			}
+		};
+		$.ajax(param);
 
 });
 

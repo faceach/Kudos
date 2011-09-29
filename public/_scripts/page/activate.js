@@ -16,6 +16,7 @@
 
 // Document Ready.
 jQuery(function ($) {
+	"use strict";
 
     var $elMail = $("#fb-mail");
     var $elName = $("#fb-username");
@@ -127,13 +128,13 @@ jQuery(function ($) {
 						
 						var data = {"user":{"email": email, "password": password, "nickname": nickname }};
 						var param = {
-							url: "http://0.0.0.0:3000/users",
+							url: "/users",
 							data: data,
 							type: "POST",
 							datatype: "application/json",
 							success: function(data){
 								if(data && data.result === "success"){
-									location.href="/targets/new";
+									location.href = "/targets/new";
 								}
 								else{
 									console && console.log("Reg error");

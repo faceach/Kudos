@@ -57,12 +57,12 @@
 
         init: function () {
             var ord = [
-                "users/login",
-                "users/new",
-                "targets",
-                "targets/new",
-                "profile",
-                "account"
+                "/users/login",
+                "/users/new",
+                "/targets/new",
+                "/targets",
+                "/profile",
+                "/account"
             ];
             var $guideButton = $("<ul id=\"slidenav\">" +
                                     "<li class=\"slidenav-prev hidden\">" +
@@ -76,13 +76,10 @@
                 $next = $guideButton.find("#slidenav-btn-next");
 
             // Get Current Page Index
-            var arrUrl = location.pathname.split("/");
-            var sFileName = (arrUrl[arrUrl.length - 1].split(".")[0]).toLowerCase();
-            var iNav = 0,
-                urlPrev = "#",
-                urlNext = "#";
+            var arrUrl = location.pathname;
+            var iNav = 0;
             for (var i = 0; i < ord.length; i++) {
-                if (ord[i] === sFileName) {
+                if (ord[i] === arrUrl) {
                     iNav = i;
                     break;
                 }
@@ -107,10 +104,10 @@
 
             // Events
             $prev.click(function () {
-                location.href = "./" + urlPrev;
+                location.href = urlPrev;
             });
             $next.click(function () {
-                location.href = "./" + urlNext;
+                location.href = urlNext;
             });
 
             // Mouse Events

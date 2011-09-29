@@ -46,7 +46,7 @@
 			var password = $("#loginform-password").val();
 			var data = {"email":username, "password":password};
 			var param = {
-				url: "http://0.0.0.0:3000/users/login",
+				url: "/users/login",
 				data: data,
 				type: "POST",
 				datatype: "application/json",
