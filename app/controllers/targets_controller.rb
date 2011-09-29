@@ -89,7 +89,8 @@ class TargetsController < ApplicationController
         @user_id = params[:user_id]
       end
       format.html do
-        @user_id = session[:user_id]
+        #@user_id = session[:user_id]
+        @user_id = 1
       end
     end
   end

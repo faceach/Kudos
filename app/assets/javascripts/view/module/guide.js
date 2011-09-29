@@ -57,10 +57,10 @@
 
         init: function () {
             var ord = [
-                "apply",
-                "activate",
-                "plan",
-                "mypage",
+                "users/login",
+                "users/new",
+                "targets",
+                "targets/new",
                 "profile",
                 "account"
             ];
@@ -107,10 +107,10 @@
 
             // Events
             $prev.click(function () {
-                location.href = "./" + urlPrev + ".htm";
+                location.href = "./" + urlPrev;
             });
             $next.click(function () {
-                location.href = "./" + urlNext + ".htm";
+                location.href = "./" + urlNext;
             });
 
             // Mouse Events

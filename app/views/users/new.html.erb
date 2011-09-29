@@ -1,78 +1,80 @@
-<script language="JavaScript" type="text/javascript"> 
-    // <![CDATA[
-	
-	function submitForm(){
-		document.forms[0].submit();
-	}
-	
-	// ]]>
-</script> 
-<div class="pg-title">
-        <span class="col-r txt-6xl pg-title-welcome">欢迎来到啄米...</span>
-        <h2 class="txt-4xl azure">
-            激活个人账号
-        </h2>
+<link type="text/css" rel="stylesheet" media="screen" href="/_styles/page/activate.css">
+<div id="main">
+    <div id="titlebar">
+        <div class="pw align-c cf">
+	        <h2 class="italic col-l ml-60 txt-6xl">欢迎来到啄米：</h2>
+            <a class="titlebar-link ora col-r hand mr-10">已经是啄米注册用户？点击上方登录</a>
+        </div>
     </div>
-    <div id="main" class="mt-20 cf">
-        <div class="col-l col-w">
-            <%= form_for @user, :url => users_path do |f| %>
+    <div id="content" class="pw align-c">
+	    <div id="container">
+		    <h2 class="ora italic txt-4xl">激活个人账号</h2>
+            <form action="" id="form-createuser">
                 <fieldset class="formbox">
-                    <legend class="bold bla txt-xxl fb-title">登录</legend>
-                    <div>
-                        <p class="azure mt-15 fb-firstel">
-                            <label for="fb-mail">电子邮件：</label>
+                    <legend class="fb-title hidden">激活个人账号</legend>
+                    <div class="col-l col-n">
+                        <div>
+                            <p class="bla mt-20">
+                                <label for="fb-mail">电子邮件：</label>
+                            </p>
+                            <p class="mt-5 pos-rel">
+                                <input type="text" id="fb-mail" class="fb-input outerglow" />
+                                <span class="pos-rel fb-tip whi hidden col-r">
+                                    <sup class="pos-abs icon-formerr"></sup>
+                                    <span class="fb-tip-msg"></span>
+                                </span>
+                            </p>
+                            <p class="gra mt-5">用来登录啄米，请牢记此Email</p>
+                        </div>
+                        <div>
+                            <p class="bla mt-20">
+                                <label for="fb-nickname">起个拉风的用户名：</label>
+                            </p>
+                            <p class="mt-5 pos-rel">
+                                <input type="text" id="fb-username" class="fb-input outerglow" autofocus />
+                                <span class="pos-rel fb-tip whi hidden col-r">
+                                    <sup class="pos-abs icon-formerr"></sup>
+                                    <span class="fb-tip-msg"></span>
+                                </span>
+                            </p>
+                            <p class="gra mt-5">使用你在网上常用昵称，小于12个字符</p>
+                        </div>
+                        <div>
+                            <p class="bla mt-20">
+                                <label for="fb-password">设置密码：</label>
+                            </p>
+                            <p class="mt-5 pos-rel">
+                                <input type="password" id="fb-password" class="fb-input outerglow" />
+                                <span class="pos-rel fb-tip whi hidden col-r">
+                                    <sup class="pos-abs icon-formerr"></sup>
+                                    <span class="fb-tip-msg"></span>
+                                </span>
+                            </p>
+                            <p class="gra mt-5"">6-16个字符</p>
+                        </div>
+                        <p class="mt-15">
+                            <input type="checkbox" id="fb-chk-protocal" class="fb-chkbox" />
+                            <label for="fb-chk-protocal">提交完该表单，就意味着您同意了《<a href="#this" class="ora">使用协议</a>》</label>
                         </p>
-                        <p class="mt-5 pos-rel">
-							<%= f.text_field :email, :class => "fb-input outerglow" %>
-                            <span class="pos-abs fb-tip whi hidden">
-                                <sup class="pos-abs icon-formerr"></sup>
-                                <span class="fb-tip-msg"></span>
-                            </span>
-                        </p>
-                        <p class="gry mt-5">用来登录啄米，请牢记此Email</p>
                     </div>
-                    <div>
-                        <p class="azure mt-15">
-                            <label for="fb-nickname">起个拉风的用户名：</label>
-                        </p>
-                        <p class="mt-5 pos-rel">
-							<%= f.text_field :nickname, :class => "fb-input outerglow" %>
-                            <span class="pos-abs fb-tip whi hidden">
-                                <sup class="pos-abs icon-formerr"></sup>
-                                <span class="fb-tip-msg"></span>
-                            </span>
-                        </p>
-                        <p class="gry mt-5">使用你在网上常用昵称，小于12个字符</p>
+                    <div class="col-r col-w txtalign-c">
+                        <div class="form-createuser-action mt-25">
+                            <p class="txt-9xl gry italic"><sub class="txt-3xl">"</sub>死磕是一种精神，它与时间有关<sup class="txt-3xl">"</sup></p>
+                            <p class="mt-50">
+                                <a id="fb-createuser" href="#this" class="ndr txt-7xl outerglow btn-join-disable">
+                                    <span>欢迎加入啄米</span>
+                                </a>
+                                <span class="hidden">
+                                    <input type="submit" id="fb-createuser" class="btn-join outerglow" value="欢迎加入啄米" />
+                                </span>
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="azure mt-15">
-                            <label for="fb-password">设置密码：</label>
-                        </p>
-                        <p class="mt-5 pos-rel">
-							<%= f.text_field :password, :class => "fb-input outerglow" %>
-                            <span class="pos-abs fb-tip whi hidden">
-                                <sup class="pos-abs icon-formerr"></sup>
-                                <span class="fb-tip-msg"></span>
-                            </span>
-                        </p>
-                        <p class="gry mt-5"">6-16个字符</p>
-                    </div>
-                    <p class="mt-15">
-                        <input type="checkbox" id="fb-chk-protocal" class="fb-chkbox" />
-                        <label for="fb-chk-protocal">我已于都并接受《<a href="#this" class="azure">使用协议</a>》</label>
-                    </p>
-                    <p class="mt-18">
-                        <a id="fb-createuser" href="plan.htm" class="btn-yes btn-disable">
-                            创建用户
-                        </a>
-                        <span class="hidden">
-                            <input type="submit" id="fb-createuser-submit" class="btn-yes outerglow" value="创建用户" />
-                        </span>
-                    </p>
                 </fieldset>
-            <% end%>
-        </div>
-        <div class="col-l col-n">
-        
-        </div>
+            </form>
+	    </div>
     </div>
+</div>
+<%= content_for :init do %>
+<script type="text/javascript" src="/_scripts/page/activate.js"></script>
+<% end %>

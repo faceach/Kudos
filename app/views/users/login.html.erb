@@ -1,4 +1,7 @@
+<link type="text/css" rel="stylesheet" media="screen" href="/_styles/page/apply.css">
 <div id="main">
+	<%=session[:user_id]%>
+	
     <div id="titlebar">
         <div class="pw align-c cf">
         </div>
@@ -35,6 +38,6 @@
     </div>
 </div>
 <%= content_for :init do %>
-<script type="text/javascript" src="/page/apply.js"></script>
+<script type="text/javascript" src="/_scripts/page/apply.js"></script>
 <% end %>
 

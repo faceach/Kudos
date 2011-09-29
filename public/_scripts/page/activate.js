@@ -118,6 +118,33 @@ jQuery(function ($) {
             if ($elChk[0].checked) {
                 if (validNull()) {
                     console.log("pass");
+
+					//{"user":{"email":"z2@z.z", "password":"123456","nickname":"a9"}}
+					
+						var email = $("#fb-mail").val();
+						var nickname = $("#fb-username").val();
+						var password = $("#fb-username").val();
+						
+						var data = {"user":{"email": email, "password": password, "nickname": nickname }};
+						var param = {
+							url: "http://0.0.0.0:3000/users",
+							data: data,
+							type: "POST",
+							datatype: "application/json",
+							success: function(data){
+								if(data && data.result === "success"){
+									location.href="/targets/new";
+								}
+								else{
+									console && console.log("Reg error");
+								}
+							},
+							error: function (jqXHR, textStatus, errorThrown) {
+									console && console.log("Reg error");
+							}
+						};
+						$.ajax(param);
+
                 }
             }
             return false;

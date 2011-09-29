@@ -1,239 +1,391 @@
-<div id="mypage" class="mt-8 cf">
-  <div class="col-l col-w">
-    <div id="functionbox" class="cf">
-      <div id="fnb-planlist" class="cf">
-        <span class="txt-6xl bla col-l ml-10">我要更新：</span>
-		<%= render :partial => "target", :collection => @targets %>
-      </div>
-      <form action="/targets/1/activities" id="form-function" class="clear hidden">
-        <fieldset class="formbox">
-          <legend class="hidden">烧</legend>
-          <div id="fnb-hour" class="col-l ml-5">
-            <span class="ph-txt">
-              <span class="ph-val">1</span>
-              <span class="ph-unit">小时</span>
-			  <input type="hidden" id="fnb-hidden-target-id" class="ph-target-id">
-			  <input type="hidden" id="fnb-hidden-user-id" class="ph-user-id" value="<%=session[:user_id]%>">
-			  <input type="hidden" id="fnb-hidden-authenticity" class="ph-authenticity" value="<%=form_authenticity_token %>">
-            </span>
-          </div>
-          <div class="col-l ml-50 mt-30">
-            <label class="txt-6xl bla" for="fnb-input">这次我完成了：</label>
-            <input type="text" id="fnb-input" />
-            <span class="txt-6xl mgry">分钟</span>
-            <a id="fnb-submit" href="#this" class="btn-yes btn-disable ml-10">
-              提交
-            </a>
-            <span class="hidden">
-              <input type="submit" id="fnb-input-submit" class="btn-yes outerglow" value="提交" />
-            </span>
-            <p id="fnb-err" class="red"></p>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-    <div>
-      <div class="pg-title-feeds pos-rel">
-        <ul id="plantype" class="col-r hor pos-abs ndr">
-          <li class="active pf-all">
-            <a href="#this">全部</a>
-          </li>
-          <li class="pf-one">
-            <a href="#this">1小时</a>
-          </li>
-          <li class="pf-ten">
-            <a href="#this">10小时</a>
-          </li>
-          <li class="pf-hdrd">
-            <a href="#this">100小时</a>
-          </li>
-        </ul>
-        <h2 class="txt-xxl bold azure">
-          谁在用啄米
-        </h2>
-      </div>
-      <div id="filterbox" class="cf mt-5">
-        <ul class="fb-list hor azure col-l txt-m mt-3">
-          <li class="first">
-            <a href="#this">图片</a>
-          </li>
-          <li>
-            <a href="#this">音乐</a>
-          </li>
-          <li>
-            <a href="#this">视频</a>
-          </li>
-          <li>
-            <a href="#this">活动</a>
-          </li>
-        </ul>
-        <div class="pos-rel col-r">
-          <input id="fb-search" type="text" class="mgry" autofocus />
-          <a href="#this" class="pos-abs btn-fb-clear txtindent">Clear</a>
-        </div>
-      </div>
-      <div id="feedsbox">
-        <div class="fb-record cf">
-          <a href="#this" class="col-l">
-            <img src="/assets/photos/m.png" />
-          </a>
-          <div class="fb-r-container col-l">
-            <div class="fb-r-content cf">
-              <div class="cf">
-                <p class="col-l">
-                  <a href="#this" class="azure ndr">SHU</a>
-                  <span class="fb-r-state">
-                    10分钟前更新了<span class="fb-r-plan">1小时</span>状态:
-                  </span>
-                  <span class="fb-r-title">今天又跑了30分钟</span>
+<link type="text/css" rel="stylesheet" media="screen" href="/_styles/page/mypage.css">
+<div id="main">
+    <div id="titlebar">
+        <div class="pw align-c cf txtalign-c">
+            <div id="titlebar-tip" class="pos-rel">
+                <p class="whi txt-m italic">
+                    我们发现你正在进行跑步计划。如果你可以完善个人资料我们可以为你提供更好的服务。点击上方个人设置完善个人资料。
                 </p>
-                <p class="col-r">
-                  <span class="fb-r-date">2011.06.12 04:40 PM</span>
-                </p>
-              </div>
-              <div class="clear mt-8">
-                <a class="col-r">
-                  <img src="/assets/photos/pic_001.gif" />
-                </a>
-                <p class="bla fb-r-text">他出身于书香门第，父亲是大学教授。他为爱妻，20年来从不上CCAV；他是个好爸爸；他顾家，厌恶应酬，滴酒不沾；他才华横溢，琴棋书画样样精通，学生时是体育全能，探戈高手；他饱读诗书，季羡林赞他可胜任北大的研究生导师，曾与钱钟书是忘年之交，他说他只是个戏子。他就是陈道明。一个很给力的男人。</p>
-              </div>
-              <ul class="fb-r-action mt-8 clear col-r hor ndr">
-                <li class="first">
-                  <a href="#this">留言</a>
-                </li>
-                <li>
-                  <a href="#this">支持</a>
-                </li>
-              </ul>
+                <a class="titlebar-tip-btn-close pos-abs hand"></a>
             </div>
-          </div>
         </div>
-        <div class="fb-record cf last">
-          <a href="#this" class="col-l">
-            <img src="/assets/photos/m.png" />
-          </a>
-          <div class="fb-r-container col-l">
-            <div class="fb-r-content cf">
-              <div class="cf">
-                <p class="col-l">
-                  <a href="#this" class="fb-r-me txt-3xl ndr">我</a>
-                  <span class="fb-r-state">
-                    10分钟前更新了<span class="fb-r-plan">10小时</span>状态:
-                  </span>
-                  <span class="fb-r-title">今天又跑了30分钟</span>
-                </p>
-                <p class="col-r">
-                  <span class="fb-r-date">2011.06.12 04:40 PM</span>
-                </p>
-              </div>
-              <div class="clear mt-8">
-                <p class="bla fb-r-text">他出身于书香门第，父亲是大学教授。他为爱妻，20年来从不上CCAV；他是个好爸爸；他顾家，厌恶应酬，滴酒不沾。</p>
-              </div>
-              <ul class="fb-r-action mt-8 clear col-r hor ndr">
-                <li class="first">
-                  <a href="#this">留言</a>
-                </li>
-                <li>
-                  <a href="#this">支持</a>
-                </li>
-              </ul>
+    </div>
+    <div id="content" class="pw align-c">
+	    <div id="container" class="cf">
+            <div class="col-l col-w">
+                <div class="cf mt-10">
+                    <p class="italic ora col-l txt-4xl mt-30">我要更新：</p>
+                    <div id="myplanlist" class="col-l ml-40">
+                        <div class="planlist-container">
+                            <ul class="planlist hor">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="publishbox" class="cf pos-rel mt-35">
+                    <div class="col-l col-n">
+                        <p class="txt-4xl italic">
+                            这次我烧了
+                            <span id="publishbox-time" class="ora txt-8xl ml-10">10</span>
+                            <span class="txt-5xl ml-10">分钟</span>
+                        </p>
+                        <div id="publishbox-dragbar" class="pos-rel mt-20">
+                        </div>
+                        <p class="mt-30 txt-4xl gra">我一共烧了：<span>1</span>小时<span>10</span>分钟</p>
+                    </div>
+                    <div class="col-r col-w">
+                        <textarea id="publishbox-input" class="fb-textarea gra hidden" rows="5"></textarea>
+                        <textarea id="publishbox-input-hint" class="fb-textarea gra" rows="5">分享下你在梦想路上的感受，让更多的人来关注你</textarea>
+                        <ul id="publishbox-add" class="hor mt-8 hidden">
+                            <li class="publishbox-add-emote first">
+                                <a class="hand">表情</a>
+                            </li>
+                            <li class="publishbox-add-photo">
+                                <a class="hand">图片</a>
+                            </li>
+                            <li class="publishbox-add-sound">
+                                <a class="hand">音乐</a>
+                            </li>
+                        </ul>
+                        <div class="txtalign-r mt-10">
+                            <a id="publishbox-btn-publish" class="hand gra txt-3xl inlineblock">发布</a>
+                        </div>
+                    </div>
+                    <span class="publishbox-prong pos-abs"></span>
+                </div>
+                <div id="feedsbox" class="mt-10">
+                    <h2 class="txt-xxl bold pure">
+                        <span class="feedsbox-title">最新动态</span>
+                    </h2>
+                    <div id="feedslist">
+                        <div class="feedslist-record cf">
+                            <a href="#this" class="col-l mt-10">
+                                <img src="/assets/photos/m.jpg" alt="" />
+                            </a>
+                            <div class="feedslist-container col-l ml-10">
+                                <p class="cf">
+                                    <em class="feedslist-time mgry col-r mt-5">3分钟前 来自FIT随享微博客户端</em>
+                                    <a href="#this" class="feedslist-name ndr txt-m">Debbie Tang</a>
+                                    <span class="feedslist-topic ml-5 mgry">更新了<span class="feedslist-topic-hour">10</span>小时<span class="feedslist-topic-plan">跑步</span>状态</span>
+                                    <em class="feedslist-update txt-5xl pur ml-10">+ 10分钟</em>
+                                </p>
+                                <div class="feedslist-content mt-5 ml-5 cf pos-rel">
+                                    <a class="feeds-btn-showcomments hand ndr col-r">
+                                        <span>0</span>
+                                    </a>
+                                    <div class="pos-abs feeds-btnbox">
+                                        <p class="col-l pur">
+                                            <span class="col-l">
+                                                <span class="feeds-likecount">1</span> *
+                                            </span>
+                                            <a class="hand pur ndr feeds-btn-like active txtindent ml-5 col-l">like</a>
+                                        </p>
+                                        <a class="hand pur feeds-btn-addcomments col-l ml-10">添加评论</a>
+                                    </div>
+                                    <p class="bla feedslist-content-text">红十字、达芬奇、动车……难道这些是中国2012年前的狂燥？曾经听说过有个理论，外星人其实就是通过输入基因达到控制一些国家执政领导者，故意破坏国家政权，激起民族矛盾和安定团结</p>
+                                    <a class="feedslist-content-img hand mt-13 col-l">
+                                        <img src="/assets/photos/pic_002.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="feedslist-comment ml-5 mt-15 cf">
+                                    <a href="#this" class="col-l">
+                                        <img src="/assets/photos/m.jpg" alt="" />
+                                    </a>
+                                    <div class="feedslist-comment-container col-l ml-10">
+                                        <p class="">
+                                            <a href="#this" class="feedslist-comment-name ndr txt-m pur">我</a>
+                                            <span class="ml-5 mgry">回复到：</span>
+                                        </p>
+                                        <div class="feedslist-comment-content mt-10 ml-5">
+                                            <div class="feedslist-comment-inputbox cf">
+                                                <a class="hand feedslist-comment-emote col-r"></a>
+                                                <input type="text" value="春眠不觉晓..." class="col-l" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedslist-record cf">
+                            <a href="#this" class="col-l mt-10">
+                                <img src="/assets/photos/m.jpg" alt="" />
+                            </a>
+                            <div class="feedslist-container col-l ml-10">
+                                <p class="cf">
+                                    <em class="feedslist-time mgry col-r mt-5">3分钟前 来自FIT随享微博客户端</em>
+                                    <a href="#this" class="feedslist-name ndr txt-m">Debbie Tang</a>
+                                    <span class="feedslist-topic ml-5 mgry">更新了<span class="feedslist-topic-hour">10</span>小时<span class="feedslist-topic-plan">跑步</span>状态</span>
+                                    <em class="feedslist-update txt-5xl pur ml-10">+ 10分钟</em>
+                                </p>
+                                <div class="feedslist-content mt-5 ml-5 cf pos-rel">
+                                    <a class="feeds-btn-showcomments active hand ndr col-r">
+                                        <span>1</span>
+                                    </a>
+                                    <div class="pos-abs feeds-btnbox">
+                                        <p class="col-l pur">
+                                            <span class="col-l hidden">
+                                                <span class="feeds-likecount">0</span> *
+                                            </span>
+                                            <a class="hand pur ndr feeds-btn-like txtindent ml-5 col-l">like</a>
+                                        </p>
+                                        <a class="hand pur feeds-btn-addcomments col-l ml-10">添加评论</a>
+                                    </div>
+                                    <p class="bla feedslist-content-text">红十字、达芬奇、动车……难道这些是中国2012年前的狂燥？曾经听说过有个理论，外星人其实就是通过输入基因达到控制一些国家执政领导者，故意破坏国家政权，激起民族矛盾和安定团结</p>
+                                    <a class="feedslist-content-img hand mt-13 col-l">
+                                        <img src="/assets/photos/pic_002.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="feedslist-comment ml-5 mt-15 cf">
+                                    <a href="#this" class="col-l">
+                                        <img src="/assets/photos/m.jpg" alt="" />
+                                    </a>
+                                    <div class="feedslist-comment-container col-l ml-10">
+                                        <p class="">
+                                            <a href="#this" class="ndr txt-m pur">我</a>
+                                            <span class="ml-5 mgry">回复到：</span>
+                                        </p>
+                                        <div class="feedslist-comment-content mt-10 ml-5">
+                                            <div class="feedslist-comment-publish">
+                                                <div class="feedslist-comment-inputbox cf">
+                                                    <a class="hand feedslist-comment-emote col-r"></a>
+                                                    <input type="text" value="春眠不觉晓..." class="col-l" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedslist-comment ml-5 mt-15 cf">
+                                    <a href="#this" class="col-l">
+                                        <img src="/assets/photos/m.jpg" alt="" />
+                                    </a>
+                                    <div class="feedslist-comment-container col-l ml-10">
+                                        <p class="">
+                                            <a href="#this" class="feedslist-comment-name ndr txt-m pur">Mike</a>
+                                            <span class="ml-5 mgry"><span class="feedslist-comment-time">10</span>分钟前回复</span>
+                                        </p>
+                                        <div class="feedslist-comment-content mt-10 ml-5">
+                                            红十字、达芬奇、动车……难道这些是中国2012年前的狂燥？曾经听说过有个理论，外星人其实就是通过输入基因达到控制一些国家执政领导者，故意破坏国家政权，激起民族矛盾和安定团结，以达到人类的骚乱，从而引发战乱，达到毁灭地球目的！地球上百上千年对于外星人只有几秒。 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="col-r col-n">
+                <div id="pointsbox" class="cf mt-10">
+                    <a class="pointsbox-headshot col-l hand pos-rel">
+                        <img src="/assets/photos/l.jpg" alt="" />
+                        <span class="pos-abs pointsbox-num whi">5</span>
+                    </a>
+                    <div class="col-l ml-13">
+                        <p class="pointsbox-name ml-3 bla">
+                            <span class="pointsbox-gender-male col-r mr-5"></span>
+                            <span>小舒一路狂奔</span>
+                        </p>
+                        <div class="pointsbox-bar mt-8">
+                            <div class="pointsbox-progress col-l whi">O<span class="ml-5 txt-s">hrs</span></div>
+                            <div class="pointsbox-like col-r bla">
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="gra italic txt-m mt-15">
+                    <textarea id="signature" rows="2">I am on my way to the future, where you are.</textarea>
+                </p>
+                <div id="weather" class="mt-15">
+                    <span class="gra position">上海市</span>
+                    <span class="ora ml-15">8月2日 晴 28C - 30C</span>
+                </div>
+                <ul id="activitystatisticbox" class="hor txtalign-c mt-15">
+                    <li class="first">
+                        <p class="ora txt-7xl">3</p>
+                        <span class="mgry mt-10 inlineblock">计划</span>
+                    </li>
+                    <li>
+                        <p class="ora txt-7xl">0</p>
+                        <span class="mgry mt-10 inlineblock">粉丝</span>
+                    </li>
+                    <li>
+                        <p class="ora txt-7xl">0</p>
+                        <span class="mgry mt-10 inlineblock">关注</span>
+                    </li>
+                </ul>
+                <div id="hotplan" class="mt-15">
+                    <h2 class="whi">热门计划</h2>
+                    <div class="hotplan-container">
+                        <p class="hotplan-more">
+                            <a href="#this" class="mgry">更多&gt;&gt;</a>
+                        </p>
+                        <ul class="hotplan-list mt-10">
+                            <li class="first active">
+                                <p class="cf">
+                                    <a href="#this" class="hotplan-icon col-l ml-13">
+                                        <img src="/assets/icons/travel.png" alt="travel" width="73" height="73" />
+                                    </a>
+                                </p>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                        <span class="col-l mgry">1.旅行</span>
+                                        <span class="col-r hotplan-item-des">
+                                            <span class="hotplan-headcount ora">90</span>
+                                            <span class="ora">人</span>
+                                            <span class="mgry">参与</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                        <span class="col-l mgry">2.跑步</span>
+                                        <span class="col-r hotplan-item-des">
+                                            <span class="hotplan-headcount ora">90</span>
+                                            <span class="ora">人</span>
+                                            <span class="mgry">参与</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">3.学习</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">4.我要发财</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">5.减肥</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">6.学习吉他</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">7.学习英语</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">8.背单词</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">9.弹钢琴</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="pos-rel hotplan-item-container">
+                                    <a class="gra hidden pos-abs hotplan-item-join hand">
+                                        参与计划
+                                    </a>
+                                    <a class="cf hotplan-item hand">
+                                    <span class="col-l mgry">10.学烧菜</span>
+                                    <span class="col-r hotplan-item-des">
+                                        <span class="hotplan-headcount ora">80</span>
+                                        <span class="ora">人</span>
+                                        <span class="mgry">参与</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="activity" class="mt-15">
+                    <h2 class="cf">
+                        <span class="ora col-l">[活动]</span>
+                        <span class="col-l ml-3">大家一起跑</span>
+                        <span class="col-r position">上海市</span>
+                    </h2>
+                    <p class="txtalign-c activity-content mt-10">
+                        <a class="hand">
+                            <img src="/assets/photos/ad_running.png" alt="" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+	    </div>
     </div>
-  </div>
-  <div class="col-l col-n ml-10">
-    <div id="profilebox" class="cf">
-      <div class="pb-headshot col-l pos-rel">
-        <a href="#this" class="pb-hs-img">
-          <img src="/assets/photos/xxl.png" alt="LiangShu" />
-        </a>
-        <a href="#this" class="pb-hs-edit pos-abs whi">更改头像</a>
-      </div>
-      <div class="ml-10 col-l">
-        <p>
-          <span class="pb-name pb-male azure txt-3xl">SHU</span>
-          <a href="#this" class="azure col-r">
-            修改资料
-          </a>
-        </p>
-        <p class="pb-loc">上海</p>
-        <p class="pb-age">80后 牡羊座</p>
-        <ul id="activitystatisticbox" class="hor txtalign-c">
-          <li class="first">
-            <p class="bla txt-7xl">3</p>
-            <span class="bla txt-m">活动</span>
-          </li>
-          <li>
-            <p class="bla txt-7xl">0</p>
-            <span class="bla txt-m">达成</span>
-          </li>
-          <li>
-            <p class="bla txt-7xl">0</p>
-            <span class="bla txt-m">放弃</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="addupbox" class="clear cf mt-13">
-      <div class="col-l">
-        <p>累计完成：</p>
-        <span>Hours</span>
-      </div>
-      <ul class="hor col-l">
-        <li>0</li>
-        <li>1</li>
-        <li class="aub-sep">,</li>
-        <li>1</li>
-        <li>0</li>
-        <li>1</li>
-      </ul>
-    </div>
-    <div id="activitystatusbox" class="mt-20">
-      <ul>
-        <li class="asb-one cf">
-          <div class="asb-icon col-l">1</div>
-          <div class="asb-bar col-l">
-            <p class="asb-bar-progress"></p>
-          </div>
-          <a class="asb-giveup col-l" href="#this">
-            x
-            <span class="asb-gu-prompt">
-              放弃计划<span class="asb-gu-arrow"></span>
-            </span>
-          </a>
-        </li>
-        <li class="asb-ten cf">
-          <div class="asb-icon col-l">10</div>
-          <div class="asb-bar col-l">
-            <p class="asb-bar-progress"></p>
-          </div>
-          <a class="asb-giveup col-l" href="#this">
-            x
-            <span class="asb-gu-prompt">
-              放弃计划<span class="asb-gu-arrow"></span>
-            </span>
-          </a>
-        </li>
-        <li class="asb-hdrd cf">
-          <div class="asb-icon col-l">100</div>
-          <div class="asb-bar col-l">
-            <p class="asb-bar-progress"></p>
-          </div>
-          <a class="asb-giveup col-l" href="#this">
-            x
-            <span class="asb-gu-prompt">
-              放弃计划<span class="asb-gu-arrow"></span>
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>
-<script language="JavaScript" type="text/javascript"> 
-    // <![CDATA[
-	
-	// ]]>
-</script>
+<%= content_for :init do %>
+<script type="text/javascript" src="/_scripts/page/mypage.js"></script>
+<% end %>

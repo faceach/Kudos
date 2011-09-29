@@ -8,6 +8,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 (function ($) {
+	"use strict";
 
     var topbar = function () {
         var $menu = $("#topbar-menu"),
@@ -37,6 +38,32 @@
                 $menu.find(" > li").removeClass("active");
             });
         });
+		//
+		var $form = $("#loginform");
+		$form.find(".loginform-submit").live("click",function(){
+			console && console.log("clicked");
+			var username = $("#loginform-username").val();
+			var password = $("#loginform-password").val();
+			var data = {"email":username, "password":password};
+			var param = {
+				url: "http://0.0.0.0:3000/users/login",
+				data: data,
+				type: "POST",
+				datatype: "application/json",
+				success: function(data){
+					if(data && data.result === "success"){
+						location.href="/targets";
+					}
+					else{
+						console && console.log("login error");
+					}
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+						console && console.log("login error");
+				}
+			};
+			$.ajax(param);
+		});
     };
 
     // Document Ready.

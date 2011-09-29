@@ -70,6 +70,7 @@ class UsersController < ApplicationController
       respond_to do |format|
          format.json do
            if user
+             session[:user_id] = user.id
              render :json => {:result =>"success", :user_id => user.id }
            else
              render :json => {:result => "fail", :user_id => -1}
