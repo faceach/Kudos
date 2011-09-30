@@ -35,7 +35,7 @@ jQuery(function ($) {
         var renderCategory = function(categoryList){
 			var objPlanList = new ZM.PlanList({ $container: $("div.planlist-container"), visibleNum: 6 });
         	objPlanList
-        	.render(categoryList)
+        	.renderList(categoryList)
         	.select(updateCategory, 0)
         	.nav(function (i) { console.log("move to " + i + " paragraph"); });
 		};

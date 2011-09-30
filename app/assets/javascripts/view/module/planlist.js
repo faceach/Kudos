@@ -95,7 +95,7 @@
             $el.addClass("active");
 
             /* Highlight select dot */
-            var order = $el.attr("order");
+            var order = $el.data("order");
             var vn = __planList.visibleNum;
             var navOrder = Math.floor(order / vn);
             var $selectLi = $dotNavLi.eq(navOrder);
@@ -103,8 +103,8 @@
             $selectLi.addClass("select");
 
 			var objPlan = {
-				order: $(this).attr("order"),
-				id: $(this).attr("pid"),
+				order: order,
+				id: $el.data("pid"),
 				el: $el
 			};
 
@@ -117,28 +117,67 @@
         return this;
     };
 
-    ZM.PlanList.prototype.render = function (data) {
-        var htmlPlanListLiTemp = "<li order='{0}' pid='{1}'>" +
+	ZM.PlanList.prototype.render = function(plan, idx){
+		if(!plan){
+			return;
+		}
+        var htmlPlanlistLiTemp = "<li>" +
                                     "<a class='hand txtalign-c'>" +
-                                        "<img src='{2}' width='73' height='73' />" +
-                                        "<span class='planlist-name mgry txt-xl'>{3}</span>" +
+                                        "<img src='{0}' width='73' height='73' />" +
+                                        "<span class='planlist-name mgry txt-xl'>{1}</span>" +
                                     "</a>" +
                                 "</li>";
-        var htmlPlanListLi = "";
-        var $planlistUl = this.$planlistUl;
-		var category, id, image, categoryName;
+		var htmlPlanlistLi = "",
+			$planlistLi;
+		var $planlistUl = this.$planlistUl;
+		var id, image, categoryName;
+		id = plan.id;
+		image = plan.image;
+		image || (image = ZM.Config.defaultIcon);
+		categoryName = plan.name;
+		
+        htmlPlanlistLi = htmlPlanlistLiTemp.format(image, categoryName);
+		$planlistLi = $(htmlPlanlistLi);
+		$planlistLi.data("order", idx);
+		$planlistLi.data("pid", id);
+        $planlistUl.append($planlistLi);
+
+		return $planlistLi;
+	};
+	
+	ZM.PlanList.prototype.initPlanlist = function(){
+		var $planlistUl = this.$planlistUl;
+		$planlistUl.find(" > li:first").addClass("first");
+        this.$planlistLi = $planlistUl.find(" > li");	
+	};
+
+    ZM.PlanList.prototype.renderList = function (data) {
+		var plan;
         for (var i = 0; i < data.length; i++) {
-			category = data[i].category;
-			id = category.id;
-			image = category.image;
-			image || (image = defaultIcon);
-			categoryName = category.name;
-			
-            htmlPlanListLi = htmlPlanListLiTemp.format(i, id, image, categoryName);
-            $planlistUl.append(htmlPlanListLi);
+			plan = data[i].category;
+			if(plan){
+
+				this.render(plan, i);
+			}
         }
-        $planlistUl.find(" > li:first").addClass("first");
-        this.$planlistLi = $planlistUl.find(" > li");
+		this.initPlanlist();
+
+        return this;
+    };
+
+    ZM.PlanList.prototype.renderDetailList = function (data) {
+		var d, plan, $li;
+        for (var i = 0; i < data.length; i++) {
+			d = data[i].target;
+			plan = d.category;
+			if(plan){
+				$li = this.render(plan, i);
+				if($li){
+					$li.data("hour", d.target_count);
+				}
+			}
+        }
+		this.initPlanlist();
 
         return this;
     };

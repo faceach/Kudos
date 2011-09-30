@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
   validates_uniqueness_of :name
   has_many :targets
-  attr_accessible :targetList
+  #attr_accessor :targetList
   
   def self.loadRunning()
     category = Category.find_by_

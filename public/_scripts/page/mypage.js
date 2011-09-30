@@ -18,17 +18,39 @@ jQuery(function ($) {
 
 		var userId = $("#zm-userid").val();
 		
-        !function () {
-            var $prong = $("div#publishbox > span.publishbox-prong");
-            var defaultLeft = parseInt($prong.position().left);
+        var $prong = $("div#publishbox > span.publishbox-prong");
+        var defaultLeft = parseInt($prong.position().left);
+		
+		// Text hint
+	    ZM.Form.textHint($("#publishbox-input"), $("#publishbox-input-hint"));
 
-            var planSelectCallback = function (order, plan_id) {
+	    var burnSlider = function (defaultVal, maxVal) {
+	                var $elValue = $("#publishbox-time");
+	                $elValue.text(defaultVal);
+	                $("#publishbox-dragbar").slider({
+	                    range: "min",
+	                    value: defaultVal,
+	                    min: 0,
+	                    max: maxVal,
+	                    slide: function (event, ui) {
+	                        $elValue.text(ui.value);
+	                    }
+	                });
+	    };
 
-                var $planlistUl = $("div.planlist-container").find("ul.planlist");
-                var $planlistLi = $planlistUl.find(" > li");
-                var $planlistLiDelegate = $planlistLi.eq(1);
-                var liWidth = $planlistLiDelegate.width();
-                var liMarginLeft = parseInt($planlistLiDelegate.css("margin-left"));
+        var planSelectCallback = function (objPlan) {
+				var order, $categoryLi;
+				if(objPlan){
+					order = objPlan.order;
+					categoryId = objPlan.id;
+					$categoryLi = objPlan.el;
+				}
+				// Init burn drag-bar
+				var hour = $categoryLi.data("hour");
+				burnSlider(0, hour);
+				// Effects
+                var liWidth = $categoryLi.width();
+                var liMarginLeft = parseInt($categoryLi.css("margin-left"));
                 var liSpan = liWidth + liMarginLeft;
 
                 $prong.show().animate(
@@ -39,37 +61,19 @@ jQuery(function ($) {
                     function () {
                         // Animation complete.
                     });
-            };
+        };
 
-            var planNavCallback = function (order) {
+        var planNavCallback = function (order) {
                 $prong.hide().css("left", defaultLeft);
-            };
+        };
 
+		var renderCategory = function(categoryList){
             var objPlanList = new ZM.PlanList({ $container: $("div.planlist-container"), visibleNum: 5 });
             objPlanList
-        .render(testPlanListData)
-        .nav(planNavCallback)
-        .select(planSelectCallback, 0);
-        } ();
-
-        ZM.Form.textHint($("#publishbox-input"), $("#publishbox-input-hint"));
-
-        !function () {
-            var burnSlider = function (defaultVal, maxVal) {
-                var $elValue = $("#publishbox-time");
-                $elValue.text(defaultVal);
-                $("#publishbox-dragbar").slider({
-                    range: "min",
-                    value: defaultVal,
-                    min: 0,
-                    max: maxVal,
-                    slide: function (event, ui) {
-                        $elValue.text(ui.value);
-                    }
-                });
-            };
-            burnSlider(50, 180);
-        } ();
+        		.renderDetailList(categoryList)
+        		.nav(planNavCallback)
+        		.select(planSelectCallback, 0);
+        };
 
 		// http://0.0.0.0:3000/targets
 		var param = {
@@ -78,10 +82,24 @@ jQuery(function ($) {
 			datatype: "application/json",
 			success: function(data){
 				if(data && data.result === "success"){
-					debugger;
-					var cl = data.detail;
-					if(cl && cl.length > 0){
-						renderCategory(cl);
+					/*
+					{
+						"status":"active",
+						"target_count":10,
+						"category":{
+							"desc":"Running",
+							"id":1,
+							"image":"/assets/icons/run.png",
+							"name":"running"
+						},
+						"metadata":{
+							"name":"hour"
+						}
+					}
+					*/
+					var detail = data.detail;
+					if(detail && detail.length > 0){
+						renderCategory(detail);
 					}
 					else{
 						console && console.log("No target");						

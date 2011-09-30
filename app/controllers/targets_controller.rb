@@ -8,7 +8,7 @@ class TargetsController < ApplicationController
       format.json do
         if @user
           #@targets = @user.targets.all
-          @targets = Target.includes(:metadata, :category)
+          @targets = Target.includes(:metadata, :category).find_all_by_user_id(@user_id)
           @categories = []
           for target in @targets
             @category = target.category
@@ -19,7 +19,7 @@ class TargetsController < ApplicationController
           end
           
           if @targets
-            render :json => {:result => "success", :detail =>@categories}
+            render :json => {:result => "success", :detail =>@targets}
           else
             render :json => {:result => "fail"}
           end

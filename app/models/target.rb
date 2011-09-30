@@ -4,6 +4,7 @@ class Target < ActiveRecord::Base
   has_many :activities, :dependent => :destroy
   belongs_to :metadata
   validates_numericality_of :target_count, :only_integer => true, :greater_than => 0  
+  #ActiveRecord::Base.include_root_in_json = false
   
   def Target.calPer(target)
     
@@ -27,7 +28,7 @@ class Target < ActiveRecord::Base
   end
   
   def as_json(options={})
-    super(:only => [:target_count, :status], :include => { :category => { :only => [:id, :desc, :image, :name] }, :metadata => {:only => :name} })
+    super(:only => [:id, :target_count, :status], :include => { :category => { :only => [:id, :desc, :image, :name] }, :metadata => {:only => :name} })
   end
   
 end
