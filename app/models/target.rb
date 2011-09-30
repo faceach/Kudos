@@ -49,7 +49,7 @@ class Target < ActiveRecord::Base
   
   def as_json(options={})
     #{:hahaha => xx}.merge(self.attributes)
-    super(:only => [:id, :target_count, :status, :hahaha],:methods=>[:total_amount], :include => {:category => { :only => [:id, :desc, :image, :name] }, :metadata => {:only => :name}})
+    super(:only => [:id, :target_count, :status],:methods=>[:total_amount], :include => {:category => { :only => [:id, :desc, :image, :name] }, :metadata => {:only => :name}})
   end
   
 end
