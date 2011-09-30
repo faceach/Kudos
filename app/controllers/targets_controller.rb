@@ -9,17 +9,12 @@ class TargetsController < ApplicationController
         if @user
           #@targets = @user.targets.all
           @targets = Target.includes(:metadata, :category).find_all_by_user_id(@user_id)
-          @categories = []
           for target in @targets
-            @category = target.category
-            if !@categories.include?(target.category)
-              @categories << @category
-            end
-            @category.targets << target
+            target.totalamount = Target.calPer(target)
           end
           
           if @targets
-            render :json => {:result => "success", :detail =>@targets}
+            render :json => {:result => "success", :detail =>@targets.as_json(:methods => :xx)}
           else
             render :json => {:result => "fail"}
           end

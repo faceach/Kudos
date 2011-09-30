@@ -83,10 +83,14 @@ jQuery(function ($) {
 				data = {"target":{"target_count": hour, "category_id": categoryId}};
 				
 				var param = {
-					url: "/targets?user_id=" + userId,
+					url: "/targets.json?user_id=" + userId,
 					data: data,
 					type: "POST",
 					datatype: "application/json",
+					beforeSend: function( xhr ) {
+						var csrf_token = $('meta[name="csrf-token"]').attr('content');
+						xhr.setRequestHeader('X-CSRF-Token', csrf_token);
+					},
 					success: function(data){
 						if(data && data.result === "success"){
 							location.href = "/targets";
