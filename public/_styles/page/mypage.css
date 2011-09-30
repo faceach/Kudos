@@ -89,6 +89,10 @@
 {
     width: 50%;
 }
+#publishbox-time
+{
+	padding-right: 5px;
+}
 #publishbox-dragbar
 {
     width: 210px;

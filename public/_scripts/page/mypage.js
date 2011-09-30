@@ -15,8 +15,12 @@
 
 // Document Ready.
 jQuery(function ($) {
+		"use strict";
+	
+		var config = ZM.Config;
 
 		var userId = $("#zm-userid").val();
+		var selectTargetId;
 		
         var $prong = $("div#publishbox > span.publishbox-prong");
         var defaultLeft = parseInt($prong.position().left);
@@ -42,12 +46,12 @@ jQuery(function ($) {
 				var order, $categoryLi;
 				if(objPlan){
 					order = objPlan.order;
-					categoryId = objPlan.id;
 					$categoryLi = objPlan.el;
 				}
 				// Init burn drag-bar
-				var hour = $categoryLi.data("hour");
-				burnSlider(0, hour);
+				//var hour = $categoryLi.data("hour");
+				selectTargetId = $categoryLi.data("targetid");
+				burnSlider(0, config.maxBurnMinutes);
 				// Effects
                 var liWidth = $categoryLi.width();
                 var liMarginLeft = parseInt($categoryLi.css("margin-left"));
@@ -114,6 +118,38 @@ jQuery(function ($) {
 			}
 		};
 		$.ajax(param);
+		
+		// Update target
+		//'{"count":6}' http://0.0.0.0:3000/targets/2/activities?user_id=1
+		$("#publishbox-btn-publish").live("click", function(){
+			debugger;
+			var burnHour = $("#publishbox-time").text();
+			burnHour = parseFloat(burnHour);
+			if(isNaN(burnHour)){
+				return;
+			}
+			var data = {"count": burnHour};
+			
+			var param = {
+				url: "/targets/" + selectTargetId + "/activities?user_id=" + userId,
+				data: data,
+				type: "POST",
+				datatype: "application/json",
+				success: function(data){
+					if(data && data.result === "success"){
+						console && console.log("Update target success!")
+					}
+					else{
+						console && console.log("Update target error");
+					}
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					console && console.log("Update target error");
+				}
+			};
+			$.ajax(param);				
+		
+		});
 
 });
 

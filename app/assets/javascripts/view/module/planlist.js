@@ -10,6 +10,8 @@
 // Closure
 (function ($) {
 	"use strict";
+	
+	var config = ZM.Config;
 
     ZM.PlanList = function (args) {
         this.$planlistContainer = args.$container || $("div.planlist-container");
@@ -104,7 +106,7 @@
 
 			var objPlan = {
 				order: order,
-				id: $el.data("pid"),
+				id: $el.data("planid"),
 				el: $el
 			};
 
@@ -133,13 +135,13 @@
 		var id, image, categoryName;
 		id = plan.id;
 		image = plan.image;
-		image || (image = ZM.Config.defaultIcon);
+		image || (image = config.defaultIcon);
 		categoryName = plan.name;
 		
         htmlPlanlistLi = htmlPlanlistLiTemp.format(image, categoryName);
 		$planlistLi = $(htmlPlanlistLi);
 		$planlistLi.data("order", idx);
-		$planlistLi.data("pid", id);
+		$planlistLi.data("planid", id);
         $planlistUl.append($planlistLi);
 
 		return $planlistLi;
@@ -174,6 +176,7 @@
 				$li = this.render(plan, i);
 				if($li){
 					$li.data("hour", d.target_count);
+					$li.data("targetid", d.id);
 				}
 			}
         }

@@ -18,6 +18,7 @@ ZM.Config = {
     },
 
 	defaultIcon: "/assets/icons/icon_plan.png",
+	maxBurnMinutes: 180,
 
     Msg: {
 
