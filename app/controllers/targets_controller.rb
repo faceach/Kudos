@@ -1,4 +1,5 @@
 class TargetsController < ApplicationController
+  require 'active_support/json/encoding'
   
   before_filter :find_user_id, :only => [:create, :index]
   
@@ -14,7 +15,7 @@ class TargetsController < ApplicationController
           end
           
           if @targets
-            render :json => {:result => "success", :detail =>@targets.as_json(:methods => :xx)}
+            render :json => {:result => "success", :detail => @targets}
           else
             render :json => {:result => "fail"}
           end

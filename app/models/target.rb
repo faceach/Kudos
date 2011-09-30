@@ -28,27 +28,28 @@ class Target < ActiveRecord::Base
       
   end
   
-  def xx
+  def total_amount
     if activities != nil
-      @total_count = 0.0
+      @total_count = 0
       
       activities.each do |activity|
         if activity.metadata.name == "hour"
-          @total_count += activity.count
+          @total_count += activity.count * 60
         elsif activity.metadata.name == "minute"
-          @total_count += activity.count / 60.0 
+          @total_count += activity.count
         else
           @total_count += 0
         end
       end
-      return format("%.7f", @total_count / target_count).to_f 
+      return @total_count
     end
     
-    return 0.0
+    return 0
   end
   
   def as_json(options={})
-    super(:only => [:id, :target_count, :status], :include => {:category => { :only => [:id, :desc, :image, :name] }, :metadata => {:only => :name}})
+    #{:hahaha => xx}.merge(self.attributes)
+    super(:only => [:id, :target_count, :status, :hahaha],:methods=>[:total_amount], :include => {:category => { :only => [:id, :desc, :image, :name] }, :metadata => {:only => :name}})
   end
   
 end
