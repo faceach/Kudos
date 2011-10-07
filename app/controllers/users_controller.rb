@@ -81,7 +81,8 @@ class UsersController < ApplicationController
   
   def update
     if @user.password != params[:oldpassword]
-      reder :json => {:result => "error password"}
+      render :json => {:result => "error password", :c => @user.password, :o => params[:oldpassword]}
+      return
     end
     
     if @user.update_attributes(params[:user])
