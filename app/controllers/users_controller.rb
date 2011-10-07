@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   #before_filter :authenticate_user!, :only => [:login]
+  before_filter :find_user, :only => [ :show, :edit, :update]
   layout :resolve_layout 
   def new
     @user = User.new()
@@ -34,34 +35,6 @@ class UsersController < ApplicationController
      end 
   end
   
-  #def sign_up
-  
-  def login2
-    user = current_user
-    
-    respond_to do |format|
-       format.json do
-         if user
-           render :json => {:result =>"success", :user_id => user.id }
-         else
-           render :json => {:result => "fail", :user_id => -1}
-         end
-       end
-       format.html do
-         if user
-           session[:user_id] = user.id
-
-           if user.targets.count == 0
-             redirect_to new_target_path
-           else
-             redirect_to targets_path
-           end
-         end
-       end
-     end
-  end
-  
-  
   def login
 
     session[:user_Id] = nil
@@ -93,6 +66,20 @@ class UsersController < ApplicationController
       
     end
   end
+
+
+  def show
+    respond_to do |format|
+      format.json do
+        render :json => @user.to_json
+      end
+      format.html do
+        render :action => :show
+      end
+    end
+  end
+  
+  protected 
   
   def resolve_layout
     case action_name
@@ -102,6 +89,9 @@ class UsersController < ApplicationController
       "application"
     end
   end
-
+  
+  def find_user
+    @user = User.find(params[:id])
+  end
   
 end

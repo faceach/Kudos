@@ -20,4 +20,9 @@ class User < ActiveRecord::Base
     user
   end
   
+  def as_json(options={})
+    #{:hahaha => xx}.merge(self.attributes)
+    super(:only => [:nickname, :email, :gender])
+  end
+  
 end
