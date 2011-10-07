@@ -67,16 +67,30 @@ class UsersController < ApplicationController
     end
   end
 
-
   def show
     respond_to do |format|
       format.json do
-        render :json => @user.to_json
+        render :json => {:result => "success", :user =>@user}
       end
       format.html do
         render :action => :show
+        
       end
     end
+  end
+  
+  def update
+    if @user.password != params[:oldpassword]
+      reder :json => {:result => "error password"}
+    end
+    
+    if @user.update_attributes(params[:user])
+      render :json => {:result => "success"}
+    else
+      render :json => {:result => "fail"}
+    end
+    
+    
   end
   
   protected 
