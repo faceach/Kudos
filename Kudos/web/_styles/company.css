@@ -1,0 +1,33 @@
+﻿#company
+{
+    padding-bottom: 70px;
+}
+
+#company h2
+{
+    color: #90a6b7;
+    margin-top: 110px;
+}
+#company p
+{
+    margin-left: 53px;
+    width: 87%;
+    color: #2c2f3b;
+    display: table;
+    text-align: justify;
+}
+.corp-year
+{
+    display: table-cell;
+    *zoom: 1;
+    width: 80px;
+}
+.corp-des
+{
+    display: table-cell;
+}
+
+.company-imp
+{
+    color: #15161a;
+}

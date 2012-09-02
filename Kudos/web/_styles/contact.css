@@ -1,0 +1,70 @@
+﻿#contact
+{
+    padding-bottom: 70px;
+}
+
+#contact h2
+{
+    color: #90a6b7;
+    margin-top: 110px;
+}
+
+.contact-address
+{
+    color: #7a878f;
+    margin-top: -70px;
+}
+
+#contact-form
+{
+    margin-left: 63px;
+}
+#contact-form label
+{
+    color: #2c2f3b;
+    font-weight: bold;
+    line-height: 2.2em;
+}
+#contact-form .cf-optional label
+{
+    color: #868991;
+}
+.cf-textinput,
+.cf-textareainput
+{
+    font-size: 125%;
+    color: #868991;
+    width: 260px;
+    padding: 0 5px;
+    line-height: 2em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17) inset, 0 1px 0 rgba(255, 255, 255, 0.57);
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    border-radius: 2px;
+}
+.cf-textinput
+{
+    height: 2em;
+}
+.cf-textareainput
+{
+    resize: vertical;
+}
+#cf-submit
+{
+    color: #fff;
+    font-style: italic;
+    cursor: pointer;
+    height: 84px;
+    line-height: 84px;
+    padding: 0 68px 0 16px;
+    *width: 271px;
+    *font-size: 13px;
+
+    box-shadow: 0 0 2px #88c3ff inset, 0 2px 3px rgba(0, 0, 0, 0.13);
+    border: 1px solid #376899;
+    border-radius: 3px;
+    
+    background: #3b83cb url(../_imgs/btn_slide_next_m.png) no-repeat right center;
+}
+

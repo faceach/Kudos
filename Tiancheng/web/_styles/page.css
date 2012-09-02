@@ -1,0 +1,114 @@
+﻿/* + page style */
+html
+{
+    height: 100%;
+    background: #fff url(../_imgs/bg_page.png) repeat left top;
+}
+body
+{
+    height: 100%;
+    font: 400 75%/1.2em '微软雅黑', 'Candara', 'Tahoma', 'Arial';
+}
+.page
+{
+    min-height: 303px;
+    _height: 303px;
+    margin-bottom: 100px;
+}
+
+/* + common style */
+h1, h2, p, span, li
+{
+    line-height: 1.3em;
+}
+.btn-yel-34
+{
+    padding-right: 19px;
+    background: url(../_imgs/btn_yel_r.png) no-repeat right top;
+}
+.btn-yel-34 .fw-l
+{
+    color: #85592e;
+    line-height: 34px;
+    height: 34px;
+    padding: 0 30px 0 50px;
+    text-shadow: 0 1px 0 #fedc9a;
+    background: url(../_imgs/btn_yel_l.png) no-repeat left top;
+}
+.et-block-close
+{
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    text-indent: -5000px;
+    cursor: pointer;
+    background: url(../_imgs/btn_close.png) no-repeat left top;
+}
+* html .et-block-close
+{
+    background-image: url(../_imgs/ie6/btn_close.png);
+}
+
+/* + page width */
+.pagewidth
+{
+    width: 1024px;
+}
+
+header
+{
+    min-height: 108px;
+    _height: 108px;
+    background: url(../_imgs/bg_header.jpg) repeat-x left top;
+}
+
+nav
+{
+    background: url(../_imgs/bg_nav.png) repeat-x left top;
+}
+.nav-container
+{
+}
+.nav-container li
+{
+    position: relative;
+    z-index: 1;
+}
+.nav-menu
+{
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.75);
+}
+.ie .nav-menu
+{
+    text-shadow: 0 1px 0 #111;
+}
+.nav-menu .nav-menu-inside
+{
+    display: block;
+}
+.nav-menu .nav-menu-index
+{
+    display: block;
+    padding: 0 4em;
+    height: 45px;
+    line-height: 45px;
+}
+.active .nav-menu-index
+{
+    color: #fe9e37;
+}
+
+
+
+
+
+
+
+

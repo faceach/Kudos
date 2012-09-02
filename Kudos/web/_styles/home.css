@@ -1,0 +1,64 @@
+﻿.main li,
+.main span,
+.main p
+{
+    line-height: 1.7em;
+}
+
+.btn-link-dark
+{
+    padding: 0 13px;
+    line-height: 2em;
+    height: 2em;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #333;
+    box-shadow: 0 1px 2px #fff inset, 0 1px 1px #222;
+    
+	/* Regular color */
+	background-color: #454545;
+	/* CSS3 background */
+	background-image: linear-gradient(bottom, #323232 0%, #454545 100%);
+	background-image: -o-linear-gradient(bottom, #323232 0%, #454545 100%);
+	background-image: -moz-linear-gradient(bottom, #323232 0%, #454545 100%);
+	background-image: -webkit-linear-gradient(bottom, #323232 0%, #454545 100%);
+	background-image: -ms-linear-gradient(bottom, #323232 0%, #454545 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #454545),
+		color-stop(1, #323232)
+	);
+}
+.more
+{
+    padding-right: 27px;
+    background: url(../_imgs/icon_arrow_more.png) no-repeat right top;
+}
+
+.news ul li
+{
+    padding: 8px 8px 8px 3px;
+    border-bottom: 1px dashed #8d8d8c;
+}
+.news ul li a
+{
+    text-decoration: none;
+}
+
+.contact
+{
+    padding: 0 20px 0 35px;
+}
+
+
+
+
+
+
+
+
+
