@@ -1,9 +1,9 @@
 ﻿require.config({
     baseUrl: "./_scripts",
     paths: {
-        "class": "_lib/class",
-        "block": "_lib/block",
-        "slideshow": "_lib/slideshow"
+        "class": "../../../public/_scripts/_lib/class",
+        "block": "../../../public/_scripts/_lib/block",
+        "slideshow": "../../../public/_scripts/_lib/slideshow"
     },
     urlArgs: "version=1.0"
 });
