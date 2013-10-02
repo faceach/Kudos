@@ -1,0 +1,61 @@
+﻿#process
+{
+    padding-bottom: 70px;
+}
+
+h2
+{
+    color: #90a6b7;
+    margin-top: 110px;
+}
+
+#process p
+{
+    margin-left: 63px;
+    margin-right: 60px;
+    color: #2c2f3b;
+    text-align: justify;
+}
+
+#process ul
+{
+    margin-left: 77px;
+    width: 387px;
+    color: #2c2f3b;
+}
+#process ul li
+{
+    list-style: disc;
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.process-imgs
+{
+    margin: 20px 0 0 50px;
+}
+.process-imgs img
+{
+    margin-left: 15px;
+    border: 3px solid #f4f8fc;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.28);
+}
+
+#process-1-popup,
+#process-2-popup,
+#process-3-popup,
+#process-4-popup
+{
+    width: 884px;
+    height: 527px;
+    margin: 0 auto;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.46);
+}
+
+#process-nfs-popup
+{
+    width: 884px;
+    height: 1152px;
+    margin: 0 auto;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.46);
+}

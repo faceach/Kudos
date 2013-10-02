@@ -1,0 +1,42 @@
+﻿.slideshow
+{
+    position: relative;
+}
+.slideshow .ss-c
+{
+    display: none;
+}
+.slideshow .ss-c-active
+{
+    display: block;
+}
+
+.ss-d
+{
+    text-align: center;
+}
+.ss-d a
+{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -5000px;
+}
+
+.ss-c-next,
+.ss-c-prev
+{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+}
+.ss-c-next
+{
+    right: 0;
+}
+.ss-c-prev
+{
+    left: 0;
+}

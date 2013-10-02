@@ -1,0 +1,9 @@
+{
+	"installed_packages":
+	[
+		"jQuery",
+		"JsFormat",
+		"LESS",
+		"Package Control"
+	]
+}
